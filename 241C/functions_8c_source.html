@@ -251,16 +251,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(x);<span class="comment">//stop &lt;-- kind of interchangeble with clearMotor()</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">* Moves bot backward for a given amount of seconds</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">* @author Bernard Suwirjo  bsuwirjo@gmail.com</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">* @params  s  amount of seconds to move backward</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">*   @params  x  speed of motors</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordtype">void</span> backwardSeconds(<span class="keywordtype">float</span> s, <span class="keywordtype">float</span> x=118)</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="functions_8c.html#ad2307a73e62771dfd2639a6808da9821">  229</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#ad2307a73e62771dfd2639a6808da9821">backwardSeconds</a>(<span class="keywordtype">float</span> s, <span class="keywordtype">float</span> x=118)</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">//Set all motors to negative target value</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  motor[FL]=-x;</div>
@@ -271,256 +262,235 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(x); <span class="comment">//Stop</span></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">  248</a></span>&#160;task <a class="code" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a>()</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">float</span> target = 0;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">float</span> pGain = .3;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">float</span> iGain = .02;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">//float error = target-SensorValue[encoderLeft];</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">float</span> errorSum=0;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">/*      error=target-SensorValue[encoderLeft];</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">        errorSum+=error;</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">        motor[FL] = error*pGain+errorSum*iGain;</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">          motor[BL] = error*pGain+errorSum*iGain;*/</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">  271</a></span>&#160;task <a class="code" href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a>()</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">float</span> target = 0;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">float</span> pGain = .3;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">float</span> iGain = .02;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">//  float error = target-SensorValue[encoderRight];</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">float</span> errorSum=0;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">/*      error=target-SensorValue[encoderRight];</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment">        errorSum+=error;</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">        motor[FR] = error*pGain+errorSum*iGain;</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">      motor[BR] = error*pGain+errorSum*iGain;*/</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">* Turns bot right only using left side motors</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">* @warning requires gyro</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">* @author Bernard Suwirjo  bsuwirjo@gmail.com</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">* @author Sean Kelley  sgtkode01@gmail.com</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">* @params   degrees   amount of degrees to turn right</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">* @params   forward   boolean if bot is turning forward or backward</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">* @params   x         speed of motors</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordtype">void</span> fancyTurnRightDegrees(<span class="keywordtype">int</span> degrees, <span class="keywordtype">bool</span> forward=<span class="keyword">true</span>, <span class="keywordtype">int</span> x=80)</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">// reset encoders</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    degrees=degrees*10;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// reset gyro</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    SensorValue[gyro]=0;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// turn forwards or backwards based on forward boolean</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">if</span>(forward)</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees) <span class="comment">//While the gyro value is less than the target perform code below</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="comment">//Set only the left side motors to the target value</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            motor[FL] = x;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;          motor[BL] = x;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">//breifly set the motor values opposite to ensure an actual stop</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        motor[FL] = -10;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        motor[BL] = -10;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        wait1Msec(150);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        motor[FL] = 0;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        motor[BL] = 0;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="comment">//Set only the left side motors to the negative target value</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            motor[FL] = -x;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;          motor[BL] = -x;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        motor[FL] = 10;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      motor[BL] = 10;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      wait1Msec(150);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      motor[FL] = 0;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      motor[BL] = 0;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">* Turns bot left only using left side motors</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">* @warning requires gyro</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">* @author Bernard Suwirjo  bsuwirjo@gmail.com</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">* @author Sean Kelley  sgtkode01@gmail.com</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">* @params   degrees   amount of degrees to turn left</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">* @params   forward   boolean if bot is turning forward or backward</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">* @params   x         speed of motors</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">*</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span> fancyTurnLeftDegrees(<span class="keywordtype">int</span> degrees, <span class="keywordtype">bool</span> forward=<span class="keyword">true</span>, <span class="keywordtype">int</span> x=80)</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="comment">// reset encoders</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    degrees=degrees*10;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="comment">// reset gyro</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    SensorValue[gyro] = 0;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">if</span>(forward)</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="comment">//Set only the right side motors to the target value</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            motor[FR] = x;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;          motor[BR] = x;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        motor[FR] = -10;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        motor[BR] = -10;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        wait1Msec(150);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        motor[FR] = 0;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        motor[BR] = 0;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <span class="comment">//Set only the right side motors to the negative target value</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            motor[FR] = -x;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;          motor[BR] = -x;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        motor[FR] = 10;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        motor[BR] = 10;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        wait1Msec(150);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        motor[FR] = 0;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        motor[BR] = 0;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">  249</a></span>&#160;task <a class="code" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a>()</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">float</span> target = 0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">float</span> pGain = .3;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">float</span> iGain = .02;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">//float error = target-SensorValue[encoderLeft];</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">float</span> errorSum=0;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">/*      error=target-SensorValue[encoderLeft];</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">        errorSum+=error;</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">        motor[FL] = error*pGain+errorSum*iGain;</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">          motor[BL] = error*pGain+errorSum*iGain;*/</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">  273</a></span>&#160;task <a class="code" href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a>()</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">float</span> target = 0;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">float</span> pGain = .3;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">float</span> iGain = .02;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">//  float error = target-SensorValue[encoderRight];</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">float</span> errorSum=0;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">/*      error=target-SensorValue[encoderRight];</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">        errorSum+=error;</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">        motor[FR] = error*pGain+errorSum*iGain;</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">      motor[BR] = error*pGain+errorSum*iGain;*/</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="functions_8c.html#a66fe326f8afd742f9903ffd74f0553cc">  301</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a66fe326f8afd742f9903ffd74f0553cc">fancyTurnRightDegrees</a>(<span class="keywordtype">int</span> degrees, <span class="keywordtype">bool</span> forward=<span class="keyword">true</span>, <span class="keywordtype">int</span> x=80)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// reset encoders</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    degrees=degrees*10;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// reset gyro</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    SensorValue[gyro]=0;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="comment">// turn forwards or backwards based on forward boolean</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">if</span>(forward)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees) <span class="comment">//While the gyro value is less than the target perform code below</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="comment">//Set only the left side motors to the target value</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            motor[FL] = x;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;          motor[BL] = x;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="comment">//breifly set the motor values opposite to ensure an actual stop</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        motor[FL] = -10;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        motor[BL] = -10;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        wait1Msec(150);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        motor[FL] = 0;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        motor[BL] = 0;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="comment">//Set only the left side motors to the negative target value</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            motor[FL] = -x;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;          motor[BL] = -x;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        motor[FL] = 10;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      motor[BL] = 10;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      wait1Msec(150);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      motor[FL] = 0;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      motor[BL] = 0;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="functions_8c.html#aa4c62cc907f876b9455e3eea55621966">  355</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#aa4c62cc907f876b9455e3eea55621966">fancyTurnLeftDegrees</a>(<span class="keywordtype">int</span> degrees, <span class="keywordtype">bool</span> forward=<span class="keyword">true</span>, <span class="keywordtype">int</span> x=80)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;{</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="comment">// reset encoders</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    degrees=degrees*10;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="comment">// reset gyro</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    SensorValue[gyro] = 0;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">if</span>(forward)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="comment">//Set only the right side motors to the target value</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            motor[FR] = x;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;          motor[BR] = x;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        motor[FR] = -10;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        motor[BR] = -10;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        wait1Msec(150);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        motor[FR] = 0;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        motor[BR] = 0;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degrees)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="comment">//Set only the right side motors to the negative target value</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            motor[FR] = -x;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;          motor[BR] = -x;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="comment">//Ensure actual stop</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        motor[FR] = 10;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        motor[BR] = 10;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        wait1Msec(150);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        motor[FR] = 0;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        motor[BR] = 0;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;}</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00406"></a><span class="lineno"><a class="line" href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">  406</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">turnRightDegrees</a>(<span class="keywordtype">float</span> degree, <span class="keywordtype">float</span> x=90)</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;{</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="comment">//Reset gyro</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    SensorValue[gyro]=0;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    degree=degree*10;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="comment">//We want to slow down when we approach the target, so we calculate a first turn segment as 60% of the total</span></div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">float</span> first=degree*.6;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; first) <span class="comment">//Turn the first 60%</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    {</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="comment">//Since it&#39;s turn right, we want to set right motors backwards and left motors forward.</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            motor[FL] = x;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        motor[FR] = -x;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        motor[BL] = x;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        motor[BR] = -x;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt;degree) <span class="comment">//Turn the remainin amount.</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="comment">//We don&#39;t want the motors to run too slow, so we set a a safety net. The motor can&#39;t have a power less than 40.</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keywordflow">if</span>(x*.35&lt;40)<span class="comment">//If 35% of the motor power is less than 40, set the power to 40.</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        {</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            motor[FL] = 40;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        motor[FR] = -40;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        motor[BL] = 40;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        motor[BR] = -40;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        }</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="keywordflow">else</span> <span class="comment">//If not set it to 35%</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                motor[FL] = x*.35;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            motor[FR] = -x*.35;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            motor[BL] = x*.35;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            motor[BR] = -x*.35;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="functions_8c.html#a7fd3260c2820188d985adb87d46c840d">clearMotor</a>();</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
-<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">turnLeftDegrees</a>(<span class="keywordtype">float</span> degree, <span class="keywordtype">float</span> x=90)</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;{</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="comment">//Reset gyro</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    SensorValue[gyro]=0;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    degree=degree*10;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="comment">//We want to slow down when we approach the target, so we calculate a first turn segment as 60% of the total</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">float</span> first=degree*.6;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; first)</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    {</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="comment">//Since it&#39;s turn left, we want to set right motors forwards and left motors backwards.</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                motor[FL] = -x;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        motor[FR] = x;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        motor[BL] = -x;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        motor[BR] = x;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    }</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degree)</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    {</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="comment">//We don&#39;t want the motors to run too slow, so we set a a safety net. The motor can&#39;t have a power less than 40.</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">if</span>(x*.35&lt;40)<span class="comment">//If 35% of the motor power is less than 40, set the power to 40.</span></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                motor[FL] = -40;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            motor[FR] = 40;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            motor[BL] = -40;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            motor[BR] = 40;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        }</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordflow">else</span> <span class="comment">//If not set it to 35%</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        {</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                motor[FL] = -x*.35;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        motor[FR] = x*.35;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        motor[BL] = -x*.35;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        motor[BR] = x*.35;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <a class="code" href="functions_8c.html#a7fd3260c2820188d985adb87d46c840d">clearMotor</a>();</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;}</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">  500</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">turnRightSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> x=118)</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;{</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="comment">//Since turn right, we want to set left motors forwards and right motors backwards.</span></div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    motor[FL]=x;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    motor[BL]=x;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    motor[FR]=-x;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    motor[BR]=-x;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(); <span class="comment">//Stop</span></div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;}</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
-<div class="line"><a name="l00520"></a><span class="lineno"><a class="line" href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">  520</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">turnLeftSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> x=118)</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;{</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="comment">//Since turn left, we want to set the right motors forward and the left motors backwards</span></div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    motor[FL] = -x;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    motor[BL] = -x;</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    motor[FR] = x;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    motor[BR] = x;</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(); <span class="comment">//Stop</span></div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;}</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">  411</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">turnRightDegrees</a>(<span class="keywordtype">float</span> degree, <span class="keywordtype">float</span> x=90)</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;{</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="comment">//Reset gyro</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    SensorValue[gyro]=0;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    degree=degree*10;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="comment">//We want to slow down when we approach the target, so we calculate a first turn segment as 60% of the total</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">float</span> first=degree*.6;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; first) <span class="comment">//Turn the first 60%</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="comment">//Since it&#39;s turn right, we want to set right motors backwards and left motors forward.</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            motor[FL] = x;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        motor[FR] = -x;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        motor[BL] = x;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        motor[BR] = -x;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt;degree) <span class="comment">//Turn the remainin amount.</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="comment">//We don&#39;t want the motors to run too slow, so we set a a safety net. The motor can&#39;t have a power less than 40.</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">if</span>(x*.35&lt;40)<span class="comment">//If 35% of the motor power is less than 40, set the power to 40.</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            motor[FL] = 40;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        motor[FR] = -40;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        motor[BL] = 40;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        motor[BR] = -40;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keywordflow">else</span> <span class="comment">//If not set it to 35%</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                motor[FL] = x*.35;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            motor[FR] = -x*.35;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            motor[BL] = x*.35;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            motor[BR] = -x*.35;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <a class="code" href="functions_8c.html#a7fd3260c2820188d985adb87d46c840d">clearMotor</a>();</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno"><a class="line" href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">  458</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">turnLeftDegrees</a>(<span class="keywordtype">float</span> degree, <span class="keywordtype">float</span> x=90)</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;{</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="comment">//Reset gyro</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    SensorValue[gyro]=0;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">//gyro takes degrees from 0-3600, so we multiply by 10 to get a gyro processable number</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    degree=degree*10;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">//We want to slow down when we approach the target, so we calculate a first turn segment as 60% of the total</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordtype">float</span> first=degree*.6;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; first)</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <span class="comment">//Since it&#39;s turn left, we want to set right motors forwards and left motors backwards.</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                motor[FL] = -x;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        motor[FR] = x;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        motor[BL] = -x;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        motor[BR] = x;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">while</span>(abs(SensorValue[gyro]) &lt; degree)</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="comment">//We don&#39;t want the motors to run too slow, so we set a a safety net. The motor can&#39;t have a power less than 40.</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordflow">if</span>(x*.35&lt;40)<span class="comment">//If 35% of the motor power is less than 40, set the power to 40.</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        {</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                motor[FL] = -40;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            motor[FR] = 40;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            motor[BL] = -40;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            motor[BR] = 40;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        }</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">else</span> <span class="comment">//If not set it to 35%</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                motor[FL] = -x*.35;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        motor[FR] = x*.35;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        motor[BL] = -x*.35;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        motor[BR] = x*.35;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    }</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    }</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <a class="code" href="functions_8c.html#a7fd3260c2820188d985adb87d46c840d">clearMotor</a>();</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;}</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00505"></a><span class="lineno"><a class="line" href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">  505</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">turnRightSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> x=118)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;{</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="comment">//Since turn right, we want to set left motors forwards and right motors backwards.</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    motor[FL]=x;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    motor[BL]=x;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    motor[FR]=-x;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    motor[BR]=-x;</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(); <span class="comment">//Stop</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;}</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00525"></a><span class="lineno"><a class="line" href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">  525</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">turnLeftSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> x=118)</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;{</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="comment">//Since turn left, we want to set the right motors forward and the left motors backwards</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    motor[FL] = -x;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    motor[BL] = -x;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    motor[FR] = x;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    motor[BR] = x;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <a class="code" href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a>(); <span class="comment">//Stop</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;}</div>
+<div class="ttc" id="functions_8c_html_a66fe326f8afd742f9903ffd74f0553cc"><div class="ttname"><a href="functions_8c.html#a66fe326f8afd742f9903ffd74f0553cc">fancyTurnRightDegrees</a></div><div class="ttdeci">void fancyTurnRightDegrees(int degrees, bool forward=true, int x=80)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00301">functions.c:301</a></div></div>
 <div class="ttc" id="functions_8c_html_a7fd3260c2820188d985adb87d46c840d"><div class="ttname"><a href="functions_8c.html#a7fd3260c2820188d985adb87d46c840d">clearMotor</a></div><div class="ttdeci">void clearMotor()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00085">functions.c:85</a></div></div>
-<div class="ttc" id="functions_8c_html_adae650f027918a6c70b5b8a3090884d9"><div class="ttname"><a href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00500">functions.c:500</a></div></div>
-<div class="ttc" id="functions_8c_html_a2969e9dad58b1f36d8c25daf1d308945"><div class="ttname"><a href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a></div><div class="ttdeci">task lockRightSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00271">functions.c:271</a></div></div>
-<div class="ttc" id="functions_8c_html_ad3c125876d0a7e35b33c9e7290b44477"><div class="ttname"><a href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float x=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00406">functions.c:406</a></div></div>
+<div class="ttc" id="functions_8c_html_adae650f027918a6c70b5b8a3090884d9"><div class="ttname"><a href="functions_8c.html#adae650f027918a6c70b5b8a3090884d9">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00505">functions.c:505</a></div></div>
+<div class="ttc" id="functions_8c_html_ad2307a73e62771dfd2639a6808da9821"><div class="ttname"><a href="functions_8c.html#ad2307a73e62771dfd2639a6808da9821">backwardSeconds</a></div><div class="ttdeci">void backwardSeconds(float s, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00229">functions.c:229</a></div></div>
+<div class="ttc" id="functions_8c_html_a2969e9dad58b1f36d8c25daf1d308945"><div class="ttname"><a href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a></div><div class="ttdeci">task lockRightSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00273">functions.c:273</a></div></div>
+<div class="ttc" id="functions_8c_html_ad3c125876d0a7e35b33c9e7290b44477"><div class="ttname"><a href="functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float x=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00411">functions.c:411</a></div></div>
 <div class="ttc" id="functions_8c_html_a534515b9c3d3565e68f09f6a55c579d8"><div class="ttname"><a href="functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8">drive</a></div><div class="ttdeci">void drive(bool half=false)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00061">functions.c:61</a></div></div>
-<div class="ttc" id="functions_8c_html_a5a0306536117a0ffe036b66c5b1114a7"><div class="ttname"><a href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">turnLeftDegrees</a></div><div class="ttdeci">void turnLeftDegrees(float degree, float x=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00453">functions.c:453</a></div></div>
+<div class="ttc" id="functions_8c_html_a5a0306536117a0ffe036b66c5b1114a7"><div class="ttname"><a href="functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7">turnLeftDegrees</a></div><div class="ttdeci">void turnLeftDegrees(float degree, float x=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00458">functions.c:458</a></div></div>
 <div class="ttc" id="functions_8c_html_aa501e08ff58a92bdf09046b41dfe868e"><div class="ttname"><a href="functions_8c.html#aa501e08ff58a92bdf09046b41dfe868e">forwardSeconds</a></div><div class="ttdeci">void forwardSeconds(float s, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00209">functions.c:209</a></div></div>
 <div class="ttc" id="functions_8c_html_af80c2547b941463532bcd8af7caa26d3"><div class="ttname"><a href="functions_8c.html#af80c2547b941463532bcd8af7caa26d3">fullStop</a></div><div class="ttdeci">void fullStop(int x=118, int direction=0, bool fancy=false)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00125">functions.c:125</a></div></div>
+<div class="ttc" id="functions_8c_html_aa4c62cc907f876b9455e3eea55621966"><div class="ttname"><a href="functions_8c.html#aa4c62cc907f876b9455e3eea55621966">fancyTurnLeftDegrees</a></div><div class="ttdeci">void fancyTurnLeftDegrees(int degrees, bool forward=true, int x=80)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00355">functions.c:355</a></div></div>
 <div class="ttc" id="functions_8c_html_aeef7ca63b235a5e01be69aae4fcf3c7d"><div class="ttname"><a href="functions_8c.html#aeef7ca63b235a5e01be69aae4fcf3c7d">motorcheck</a></div><div class="ttdeci">void motorcheck()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00099">functions.c:99</a></div></div>
-<div class="ttc" id="functions_8c_html_a5ecfe5536c8ea4eb1fb1d4096219076e"><div class="ttname"><a href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a></div><div class="ttdeci">task lockLeftSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00248">functions.c:248</a></div></div>
-<div class="ttc" id="functions_8c_html_abf2194684d0d683dde3a7de9fc4ace56"><div class="ttname"><a href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">turnLeftSeconds</a></div><div class="ttdeci">void turnLeftSeconds(float seconds, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00520">functions.c:520</a></div></div>
+<div class="ttc" id="functions_8c_html_a5ecfe5536c8ea4eb1fb1d4096219076e"><div class="ttname"><a href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a></div><div class="ttdeci">task lockLeftSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00249">functions.c:249</a></div></div>
+<div class="ttc" id="functions_8c_html_abf2194684d0d683dde3a7de9fc4ace56"><div class="ttname"><a href="functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56">turnLeftSeconds</a></div><div class="ttdeci">void turnLeftSeconds(float seconds, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00525">functions.c:525</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 20 2015 13:39:13 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 20 2015 13:44:13 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
