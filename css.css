@@ -22,3 +22,13 @@ h5
 {
   font-size: .9em;
 }
+
+.linkTo
+{
+  color:white;
+  margin: 0 auto;
+  background-color:#004ce4;
+  height:3.6em;
+  width:10em;
+  border-radius: 8px;
+}
