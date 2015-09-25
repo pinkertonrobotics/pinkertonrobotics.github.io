@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pre_5fauton',['pre_auton',['../main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11',1,'main.c']]]
+  ['main_2ec',['main.c',['../main_8c.html',1,'']]],
+  ['motorcheck',['motorcheck',['../functions_8c.html#aeef7ca63b235a5e01be69aae4fcf3c7d',1,'functions.c']]]
 ];

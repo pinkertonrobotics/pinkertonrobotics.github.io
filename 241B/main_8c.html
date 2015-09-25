@@ -101,6 +101,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae1e12ac0952f25cc9e2204d13b6624d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae1e12ac0952f25cc9e2204d13b6624d0">forward</a> (int seconds)</td></tr>
+<tr class="separator:ae1e12ac0952f25cc9e2204d13b6624d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e1e6ef8a2b64e3f564f91817cc3e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a70e1e6ef8a2b64e3f564f91817cc3e63">backward</a> (int seconds)</td></tr>
+<tr class="separator:a70e1e6ef8a2b64e3f564f91817cc3e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a975476cff428206ceb2984464932c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac9a975476cff428206ceb2984464932c">rotateRight</a> (int seconds)</td></tr>
+<tr class="separator:ac9a975476cff428206ceb2984464932c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339252f269755d732d043e2d5426cf0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a339252f269755d732d043e2d5426cf0b">rotateLeft</a> (int seconds)</td></tr>
+<tr class="separator:a339252f269755d732d043e2d5426cf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab532f0b1474225e81ebd23b2d05f7c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a> ()</td></tr>
 <tr class="separator:ab532f0b1474225e81ebd23b2d05f7c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371bbbbc61aa430884cb77eb56b3df53"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a> ()</td></tr>
@@ -113,7 +121,9 @@ Functions</h2></td></tr>
 <p>The three sections include Pre-Auton, Auton, and User Control.</p>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd>
 <dd>
-Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'+'@g'+'mai'+'l.'+'com'; return false;">bsuwi<span style="display: none;">.nosp@m.</span>rjo@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
+Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'+'@g'+'mai'+'l.'+'com'; return false;">bsuwi<span style="display: none;">.nosp@m.</span>rjo@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd>
+<dd>
+Spencer Couture <a href="#" onclick="location.href='mai'+'lto:'+'spe'+'nc'+'e.c'+'ou'+'tur'+'e@'+'gma'+'il'+'.co'+'m'; return false;">spenc<span style="display: none;">.nosp@m.</span>e.co<span style="display: none;">.nosp@m.</span>uture<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
 <p>Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -131,7 +141,45 @@ Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'
 </div><div class="memdoc">
 <p>Period of match when bot is using only code to operate. </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00055">55</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00143">143</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70e1e6ef8a2b64e3f564f91817cc3e63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void backward </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Moves the bot backward. Enables motors {frontl, frontr, backl, backr} for __ seconds </p>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00064">64</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1e12ac0952f25cc9e2204d13b6624d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void forward </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Moves the bot forward. Enables motors {frontl, frontr, backl, backr} for __ seconds </p>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00042">42</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -149,7 +197,45 @@ Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'
 </div><div class="memdoc">
 <p>Period before autonomous when bot cannot move, but minimal code can run </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00039">39</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00127">127</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a339252f269755d732d043e2d5426cf0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotateLeft </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotates the bot to the left. Enables motors {frontl, frontr, backl, backr} for __ seconds </p>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00104">104</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9a975476cff428206ceb2984464932c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotateRight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotates the bot to the right. Enables motors {frontl, frontr, backl, backr} for __ seconds </p>
+
+<p>Definition at line <a class="el" href="main_8c_source.html#l00086">86</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -167,14 +253,14 @@ Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'
 </div><div class="memdoc">
 <p>Period of match when driver controls the bot </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00070">70</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00158">158</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 25 2015 02:09:51 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 25 2015 02:13:06 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

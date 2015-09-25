@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['drive',['drive',['../functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8',1,'functions.c']]]
+  ['clearmotor',['clearMotor',['../functions_8c.html#a7fd3260c2820188d985adb87d46c840d',1,'functions.c']]]
 ];

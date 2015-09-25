@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['clearmotor',['clearMotor',['../functions_8c.html#a7fd3260c2820188d985adb87d46c840d',1,'functions.c']]]
+  ['backward',['backward',['../main_8c.html#a70e1e6ef8a2b64e3f564f91817cc3e63',1,'main.c']]],
+  ['backwardseconds',['backwardSeconds',['../functions_8c.html#ad2307a73e62771dfd2639a6808da9821',1,'functions.c']]]
 ];
