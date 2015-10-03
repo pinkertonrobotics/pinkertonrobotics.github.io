@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['drive',['drive',['../functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8',1,'functions.c']]]
+  ['drivebyencoder',['driveByEncoder',['../functions_8c.html#a6633d9d8f3bfb3e6e4b05dbbc1599e9c',1,'functions.c']]]
 ];
