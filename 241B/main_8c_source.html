@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,9 +116,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//                                 Pre-Autonomous</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a>()</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; bStopTasksBetweenModes = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a>(){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    bStopTasksBetweenModes = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -128,43 +128,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">   61</a></span>&#160;task <a class="code" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a>(){</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="functions_8c.html#a82e3454b7f0485deac91263a5a79ce7b">forwardSeconds</a>(2, 50);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a>(60, 30);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//                                 User Control Task</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   76</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>(){</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//                                 User Control Task</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   77</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>(){</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span>(bVEXNETActive){</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(bVEXNETActive){</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="comment">//                                      Drive</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span>        motor[backr] = vexRT[Ch2];</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        motor[frontr] = vexRT[Ch2];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        motor[backl] = vexRT[Ch3];</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        motor[frontl] = vexRT[Ch3];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      wait1Msec(10);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">//                                      Drive</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">//</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span>        motor[backr] = vexRT[Ch2];</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        motor[frontr] = vexRT[Ch2];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        motor[backl] = vexRT[Ch3];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        motor[frontl] = vexRT[Ch3];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      wait1Msec(10);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="functions_8c_html_a507906c16b5891f1d2ac958eaae6e734"><div class="ttname"><a href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00352">functions.c:352</a></div></div>
 <div class="ttc" id="main_8c_html_ab532f0b1474225e81ebd23b2d05f7c11"><div class="ttname"><a href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a></div><div class="ttdeci">void pre_auton()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00045">main.c:45</a></div></div>
 <div class="ttc" id="main_8c_html_a371bbbbc61aa430884cb77eb56b3df53"><div class="ttname"><a href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a></div><div class="ttdeci">task autonomous()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00061">main.c:61</a></div></div>
-<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00076">main.c:76</a></div></div>
+<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00077">main.c:77</a></div></div>
+<div class="ttc" id="functions_8c_html_a82e3454b7f0485deac91263a5a79ce7b"><div class="ttname"><a href="functions_8c.html#a82e3454b7f0485deac91263a5a79ce7b">forwardSeconds</a></div><div class="ttdeci">void forwardSeconds(float seconds, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00130">functions.c:130</a></div></div>
 <div class="ttc" id="functions_8c_html"><div class="ttname"><a href="functions_8c.html">functions.c</a></div><div class="ttdoc">This file contains all functions to be used by the competition code. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 2 2015 16:48:10 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 7 2015 16:46:30 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
