@@ -9,14 +9,16 @@ var indexSectionsWithContent =
 {
   0: "abcdflmprstu",
   1: "fm",
-  2: "abcdflprstu"
+  2: "abcdflprstu",
+  3: "mt"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "files",
-  2: "functions"
+  2: "functions",
+  3: "defines"
 };
 
 function convertToId(search)
