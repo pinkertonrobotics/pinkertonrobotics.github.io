@@ -94,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Sensor, dgtl3,  encoderl,       sensorQuadEncoder)</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port2,           frontr,        tmotorVex393_MC29, openLoop)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port3,           backr,         tmotorVex393_MC29, openLoop)</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port4,           frontl,        tmotorVex393_MC29, openLoop, reversed)</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port5,           backl,         tmotorVex393_MC29, openLoop, reversed)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port4,           frontl,        tmotorVex393_MC29, openLoop)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port5,           backl,         tmotorVex393_MC29, openLoop)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port6,           flyr,          tmotorVex393_MC29, openLoop)</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port7,           flyl,          tmotorVex393_MC29, openLoop)</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma config(Motor,  port8,           armt,          tmotorVex393_MC29, openLoop)</span></div>
@@ -134,54 +134,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//                                 Autonomous</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">   68</a></span>&#160;task <a class="code" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a>(){</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//                                 User Control Task</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   83</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>()</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//spin_flywheel(0,118,false);</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span>(bVEXNETActive){</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span>(vexRT[Btn8L] == 1){</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                spin_flywheel(112,<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span>(vexRT[Btn8U] == 1){</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                motor[flyr] = 0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                motor[flyl] = 0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                motor[armb] = 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                motor[armt] = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">   69</a></span>&#160;task <a class="code" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a>(){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    StartTask(drive);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    StartTask(intake);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    StartTask(flywheel);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//                                 User Control Task</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   92</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>(){</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//auto_spin_flywheel(118,5,true);</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span>(bVEXNETActive){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span>(vexRT[Btn8L] == 1){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                spin_flywheel(112);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="comment">//                                      Drive</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span>        motor[backr] = vexRT[Ch2];</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        motor[frontr] = vexRT[Ch2];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        motor[backl] = -vexRT[Ch3];</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        motor[frontl] = vexRT[Ch3];</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      wait1Msec(10);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span>(vexRT[Btn8U] == 1){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                motor[flyr] = 0;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                motor[flyl] = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                motor[armb] = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                motor[armt] = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">//</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">//                                      Drive</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="comment">//</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span>            motor[backr] = vexRT[Ch2];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            motor[frontr] = vexRT[Ch2];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            motor[backl] = -vexRT[Ch3];</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            motor[frontl] = -vexRT[Ch3];</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            wait1Msec(10);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 <div class="ttc" id="main_8c_html_ab532f0b1474225e81ebd23b2d05f7c11"><div class="ttname"><a href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a></div><div class="ttdeci">void pre_auton()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00052">main.c:52</a></div></div>
-<div class="ttc" id="main_8c_html_a371bbbbc61aa430884cb77eb56b3df53"><div class="ttname"><a href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a></div><div class="ttdeci">task autonomous()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00068">main.c:68</a></div></div>
-<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00083">main.c:83</a></div></div>
+<div class="ttc" id="main_8c_html_a371bbbbc61aa430884cb77eb56b3df53"><div class="ttname"><a href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a></div><div class="ttdeci">task autonomous()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00069">main.c:69</a></div></div>
+<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00092">main.c:92</a></div></div>
 <div class="ttc" id="functions_8c_html"><div class="ttname"><a href="functions_8c.html">functions.c</a></div><div class="ttdoc">This file contains all functions to be used by the competition code. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 20 2015 22:13:58 for 241E Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 22 2015 21:15:01 for 241E Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
