@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['testlcd',['testLCD',['../functions_8c.html#a2db45701d92b58f0faa70d92ed87eb8d',1,'functions.c']]],
-  ['turnleftdegrees',['turnLeftDegrees',['../functions_8c.html#a5a0306536117a0ffe036b66c5b1114a7',1,'functions.c']]],
-  ['turnleftseconds',['turnLeftSeconds',['../functions_8c.html#abf2194684d0d683dde3a7de9fc4ace56',1,'functions.c']]],
-  ['turnrightdegrees',['turnRightDegrees',['../functions_8c.html#ad3c125876d0a7e35b33c9e7290b44477',1,'functions.c']]],
-  ['turnrightseconds',['turnRightSeconds',['../functions_8c.html#adae650f027918a6c70b5b8a3090884d9',1,'functions.c']]]
+  ['runintake',['runIntake',['../functions_8c.html#a5ad2e3991f9ba7639c0f1fe1db5ff6f4',1,'functions.c']]],
+  ['runlauncher',['runLauncher',['../functions_8c.html#a59b30dfd8db50da02a3a3871d64d7883',1,'functions.c']]]
 ];
