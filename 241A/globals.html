@@ -69,6 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="globals.html"><span>All</span></a></li>
       <li><a href="globals_func.html"><span>Functions</span></a></li>
+      <li><a href="globals_vars.html"><span>Variables</span></a></li>
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
@@ -78,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +92,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here is a list of all documented functions, variables, defines, enums, and typedefs with links to the documentation:</div><ul>
 <li>autonomous()
 : <a class="el" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">main.c</a>
+</li>
+<li>backLeftVal
+: <a class="el" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">functions.c</a>
+</li>
+<li>backRightVal
+: <a class="el" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">functions.c</a>
 </li>
 <li>backwardSeconds()
 : <a class="el" href="functions_8c.html#a8026df343e28c863be07cbc4bfca246a">functions.c</a>
@@ -110,6 +117,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>forwardSeconds()
 : <a class="el" href="functions_8c.html#a82e3454b7f0485deac91263a5a79ce7b">functions.c</a>
 </li>
+<li>frontLeftVal
+: <a class="el" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">functions.c</a>
+</li>
+<li>frontRightVal
+: <a class="el" href="functions_8c.html#a683fab8392bf7150508c840977066645">functions.c</a>
+</li>
 <li>lockLeftSide()
 : <a class="el" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">functions.c</a>
 </li>
@@ -126,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">functions.c</a>
 </li>
 <li>setMotors()
-: <a class="el" href="functions_8c.html#a0ea83990ad8805ad461fff901905c752">functions.c</a>
+: <a class="el" href="functions_8c.html#ad8ed41f25272dc6aad41f3d0faac7dff">functions.c</a>
 </li>
 <li>setMotorsLeft()
 : <a class="el" href="functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d">functions.c</a>
@@ -159,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 28 2015 17:34:35 for 241A Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 29 2015 18:34:04 for 241A Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

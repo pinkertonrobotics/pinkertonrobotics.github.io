@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">functions.c File Reference</div>  </div>
 </div><!--header-->
@@ -109,8 +110,8 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ac2eb4a095e5d2e52f1144b6be05d2b38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a> ()</td></tr>
 <tr class="separator:ac2eb4a095e5d2e52f1144b6be05d2b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea83990ad8805ad461fff901905c752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a0ea83990ad8805ad461fff901905c752">setMotors</a> (int power)</td></tr>
-<tr class="separator:a0ea83990ad8805ad461fff901905c752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ed41f25272dc6aad41f3d0faac7dff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#ad8ed41f25272dc6aad41f3d0faac7dff">setMotors</a> (int speed)</td></tr>
+<tr class="separator:ad8ed41f25272dc6aad41f3d0faac7dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e059ac26fceeabb21bf022a931fd0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d">setMotorsLeft</a> (int speed)</td></tr>
 <tr class="separator:a19e059ac26fceeabb21bf022a931fd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d25f246c45a7aefd6395283e8bed95c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a0d25f246c45a7aefd6395283e8bed95c">setMotorsRight</a> (int speed)</td></tr>
@@ -141,6 +142,17 @@ Functions</h2></td></tr>
 <tr class="separator:a78865695e4268d88e03b81d60c9ce8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb22ab198756eb13e6a692e73dc98b3b"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a> ()</td></tr>
 <tr class="separator:acb22ab198756eb13e6a692e73dc98b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af194b09415de58a940ea08b54fb45e45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a> = 0</td></tr>
+<tr class="separator:af194b09415de58a940ea08b54fb45e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06338b8099a283968f0fa668c443a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a> = 0</td></tr>
+<tr class="separator:af06338b8099a283968f0fa668c443a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683fab8392bf7150508c840977066645"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a> = 0</td></tr>
+<tr class="separator:a683fab8392bf7150508c840977066645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd43b5378a6c28ec501b98141efa712c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a> = 0</td></tr>
+<tr class="separator:acd43b5378a6c28ec501b98141efa712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all functions to be used by the competition code. </p>
@@ -165,7 +177,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 </div><div class="memdoc">
 <p>default motor speed </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00035">35</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00033">33</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -180,7 +192,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 </div><div class="memdoc">
 <p>amount of timeout counts per second </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00034">34</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00032">32</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -218,7 +230,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00150">150</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00151">151</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -239,7 +251,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 <dd>
 Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00052">52</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00053">53</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -283,7 +295,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00168">168</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00169">169</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -330,7 +342,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00319">319</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00320">320</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -377,7 +389,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00279">279</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00280">280</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -414,7 +426,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00133">133</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00134">134</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -434,7 +446,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section warning"><dt>Warning</dt><dd>function does not work</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00227">227</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00228">228</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -454,7 +466,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section warning"><dt>Warning</dt><dd>function does not work</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00251">251</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00252">252</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -473,11 +485,11 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Set the motors to the current values</p>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00487">487</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00481">481</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0ea83990ad8805ad461fff901905c752"></a>
+<a class="anchor" id="ad8ed41f25272dc6aad41f3d0faac7dff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -485,7 +497,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
           <td class="memname">void setMotors </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>power</em></td><td>)</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -499,7 +511,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00067">67</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00068">68</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -527,7 +539,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00084">84</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00085">85</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -555,7 +567,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00098">98</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00099">99</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -574,7 +586,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Runs each motor for 1.5 seconds</p>
 <dl class="section author"><dt>Author</dt><dd>Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'+'@g'+'mai'+'l.'+'com'; return false;">bsuwi<span style="display: none;">.nosp@m.</span>rjo@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00108">108</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00109">109</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -650,7 +662,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00470">470</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00464">464</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -690,7 +702,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00357">357</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00358">358</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -727,14 +739,75 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00450">450</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00444">444</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="af06338b8099a283968f0fa668c443a35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int backLeftVal = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>value of the back left motor </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00036">36</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd43b5378a6c28ec501b98141efa712c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int backRightVal = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>value of the back right motor </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00038">38</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af194b09415de58a940ea08b54fb45e45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int frontLeftVal = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>value of the front left motor </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00035">35</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a683fab8392bf7150508c840977066645"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int frontRightVal = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>value of the front right motor </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00037">37</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 28 2015 17:34:35 for 241A Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 29 2015 18:34:04 for 241A Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
