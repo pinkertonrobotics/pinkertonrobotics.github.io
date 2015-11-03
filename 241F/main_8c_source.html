@@ -130,40 +130,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">   62</a></span>&#160;task <a class="code" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a>(){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="functions_8c.html#a59b30dfd8db50da02a3a3871d64d7883">runLauncher</a>(4, 118);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="functions_8c.html#aa501e08ff58a92bdf09046b41dfe868e">forwardSeconds</a>(1.5, 118);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="functions_8c.html#a5ad2e3991f9ba7639c0f1fe1db5ff6f4">runIntake</a>(2);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    backwardSeconds(1.5, 118);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="functions_8c.html#a59b30dfd8db50da02a3a3871d64d7883">runLauncher</a>(4, 118);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//                                 User Control Task</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   81</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>(){</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="functions_8c.html#ab078246aecda8d4b0b3235597292412d">clearline</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="functions_8c.html#acdbe86394c1d3a9adc1c0ccb6bdfa116">mainLCD</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8">drive</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            intakeCont();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            launcherCont();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    motor[launcher] = -118;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    wait10Msec(164);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    motor[launcher] = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    motor[intake] = -118;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    wait10Msec(150);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    motor[launcher] = -118;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    motor[intake] = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    wait10Msec(164);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    motor[launcher] = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    motor[intake] = -118;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    wait10Msec(155);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    motor[launcher] = -118;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    motor[intake] = 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    wait10Msec(164);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    motor[launcher] = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    motor[intake] = -118;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    wait10Msec(155);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    motor[launcher] = -118;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    motor[intake] = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    wait10Msec(164);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    motor[intake] = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    motor[launcher] = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//                                 User Control Task</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">   96</a></span>&#160;task <a class="code" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a>(){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="functions_8c.html#ab078246aecda8d4b0b3235597292412d">clearline</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="functions_8c.html#acdbe86394c1d3a9adc1c0ccb6bdfa116">mainLCD</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8">drive</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                intakeCont();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                launcherCont();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="ttc" id="main_8c_html_ab532f0b1474225e81ebd23b2d05f7c11"><div class="ttname"><a href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a></div><div class="ttdeci">void pre_auton()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00047">main.c:47</a></div></div>
-<div class="ttc" id="functions_8c_html_acdbe86394c1d3a9adc1c0ccb6bdfa116"><div class="ttname"><a href="functions_8c.html#acdbe86394c1d3a9adc1c0ccb6bdfa116">mainLCD</a></div><div class="ttdeci">void mainLCD()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00553">functions.c:553</a></div></div>
+<div class="ttc" id="functions_8c_html_acdbe86394c1d3a9adc1c0ccb6bdfa116"><div class="ttname"><a href="functions_8c.html#acdbe86394c1d3a9adc1c0ccb6bdfa116">mainLCD</a></div><div class="ttdeci">void mainLCD()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00552">functions.c:552</a></div></div>
 <div class="ttc" id="main_8c_html_a371bbbbc61aa430884cb77eb56b3df53"><div class="ttname"><a href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a></div><div class="ttdeci">task autonomous()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00062">main.c:62</a></div></div>
-<div class="ttc" id="functions_8c_html_a534515b9c3d3565e68f09f6a55c579d8"><div class="ttname"><a href="functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8">drive</a></div><div class="ttdeci">void drive(bool half=false)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00080">functions.c:80</a></div></div>
-<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00081">main.c:81</a></div></div>
-<div class="ttc" id="functions_8c_html_a59b30dfd8db50da02a3a3871d64d7883"><div class="ttname"><a href="functions_8c.html#a59b30dfd8db50da02a3a3871d64d7883">runLauncher</a></div><div class="ttdeci">void runLauncher(int rotations, int speed)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00426">functions.c:426</a></div></div>
-<div class="ttc" id="functions_8c_html_a5ad2e3991f9ba7639c0f1fe1db5ff6f4"><div class="ttname"><a href="functions_8c.html#a5ad2e3991f9ba7639c0f1fe1db5ff6f4">runIntake</a></div><div class="ttdeci">void runIntake(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00475">functions.c:475</a></div></div>
-<div class="ttc" id="functions_8c_html_aa501e08ff58a92bdf09046b41dfe868e"><div class="ttname"><a href="functions_8c.html#aa501e08ff58a92bdf09046b41dfe868e">forwardSeconds</a></div><div class="ttdeci">void forwardSeconds(float s, float x=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00236">functions.c:236</a></div></div>
+<div class="ttc" id="functions_8c_html_a534515b9c3d3565e68f09f6a55c579d8"><div class="ttname"><a href="functions_8c.html#a534515b9c3d3565e68f09f6a55c579d8">drive</a></div><div class="ttdeci">void drive(bool half=false)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00079">functions.c:79</a></div></div>
+<div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00096">main.c:96</a></div></div>
 <div class="ttc" id="functions_8c_html"><div class="ttname"><a href="functions_8c.html">functions.c</a></div><div class="ttdoc">This file contains all functions to be used by the competition code. </div></div>
-<div class="ttc" id="functions_8c_html_ab078246aecda8d4b0b3235597292412d"><div class="ttname"><a href="functions_8c.html#ab078246aecda8d4b0b3235597292412d">clearline</a></div><div class="ttdeci">void clearline()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00508">functions.c:508</a></div></div>
+<div class="ttc" id="functions_8c_html_ab078246aecda8d4b0b3235597292412d"><div class="ttname"><a href="functions_8c.html#ab078246aecda8d4b0b3235597292412d">clearline</a></div><div class="ttdeci">void clearline()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00507">functions.c:507</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 29 2015 21:20:00 for 241F Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 3 2015 21:20:01 for 241F Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
