@@ -7,10 +7,14 @@
 
 var indexSectionsWithContent =
 {
+  0: "aio",
+  1: "aio"
 };
 
 var indexSectionNames =
 {
+  0: "all",
+  1: "files"
 };
 
 function convertToId(search)
