@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -404,10 +404,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    }</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;}</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">  504</a></span>&#160;task <a class="code" href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">userControlls</a>(){</div>
+<div class="line"><a name="l00503"></a><span class="lineno"><a class="line" href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">  503</a></span>&#160;task <a class="code" href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">userControlls</a>(){</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;}</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00519"></a><span class="lineno"><a class="line" href="functions_8c.html#a8c6344f6e03d2f0a9a4ad01f26011398">  519</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a8c6344f6e03d2f0a9a4ad01f26011398">writeToLCD</a>(<span class="keywordtype">bool</span> <a class="code" href="main_8c.html#a9216b776f343cc96a978211719c0a3b9">isProMode</a>){</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        displayLCDString(1, 6, <span class="stringliteral">&quot;MODE&quot;</span>);</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keywordflow">if</span>(isProMode){</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            displayLCDString(2, 0, <span class="stringliteral">&quot;SCRUB    &gt;PRO&quot;</span>);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        }</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            displayLCDString(2, 0, <span class="stringliteral">&quot;&gt;SCRUB    PRO&quot;</span>);</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        }</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;}</div>
 <div class="ttc" id="functions_8c_html_a507906c16b5891f1d2ac958eaae6e734"><div class="ttname"><a href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00356">functions.c:356</a></div></div>
 <div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00486">functions.c:486</a></div></div>
 <div class="ttc" id="functions_8c_html_aaf5a5fb405343531462600db0961eb04"><div class="ttname"><a href="functions_8c.html#aaf5a5fb405343531462600db0961eb04">turnLeftDegrees</a></div><div class="ttdeci">void turnLeftDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00400">functions.c:400</a></div></div>
@@ -421,17 +435,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="functions_8c_html_a2969e9dad58b1f36d8c25daf1d308945"><div class="ttname"><a href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a></div><div class="ttdeci">task lockRightSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00250">functions.c:250</a></div></div>
 <div class="ttc" id="functions_8c_html_a5359725727b9a0e2588f4790da94b43e"><div class="ttname"><a href="functions_8c.html#a5359725727b9a0e2588f4790da94b43e">TIMEOUT_CNT_PER_SEC</a></div><div class="ttdeci">#define TIMEOUT_CNT_PER_SEC</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00037">functions.c:37</a></div></div>
 <div class="ttc" id="functions_8c_html_a395c992d0024bc009c3b2f2817fab76e"><div class="ttname"><a href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00449">functions.c:449</a></div></div>
+<div class="ttc" id="functions_8c_html_a8c6344f6e03d2f0a9a4ad01f26011398"><div class="ttname"><a href="functions_8c.html#a8c6344f6e03d2f0a9a4ad01f26011398">writeToLCD</a></div><div class="ttdeci">void writeToLCD(bool isProMode)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00519">functions.c:519</a></div></div>
 <div class="ttc" id="functions_8c_html_a26104fc1c8e80e3f363032ca406d711a"><div class="ttname"><a href="functions_8c.html#a26104fc1c8e80e3f363032ca406d711a">testMotors</a></div><div class="ttdeci">void testMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00107">functions.c:107</a></div></div>
 <div class="ttc" id="functions_8c_html_acc1d6ebc5509da9902714de72ecbf1bd"><div class="ttname"><a href="functions_8c.html#acc1d6ebc5509da9902714de72ecbf1bd">MOTOR_SPEED</a></div><div class="ttdeci">#define MOTOR_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00038">functions.c:38</a></div></div>
 <div class="ttc" id="functions_8c_html_ac2eb4a095e5d2e52f1144b6be05d2b38"><div class="ttname"><a href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a></div><div class="ttdeci">void clearMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00055">functions.c:55</a></div></div>
+<div class="ttc" id="main_8c_html_a9216b776f343cc96a978211719c0a3b9"><div class="ttname"><a href="main_8c.html#a9216b776f343cc96a978211719c0a3b9">isProMode</a></div><div class="ttdeci">bool isProMode</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00054">main.c:54</a></div></div>
 <div class="ttc" id="functions_8c_html_a82e3454b7f0485deac91263a5a79ce7b"><div class="ttname"><a href="functions_8c.html#a82e3454b7f0485deac91263a5a79ce7b">forwardSeconds</a></div><div class="ttdeci">void forwardSeconds(float seconds, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00132">functions.c:132</a></div></div>
-<div class="ttc" id="functions_8c_html_a9dc35ba366ddc069444a2af3f4d1872a"><div class="ttname"><a href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">userControlls</a></div><div class="ttdeci">task userControlls()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00504">functions.c:504</a></div></div>
+<div class="ttc" id="functions_8c_html_a9dc35ba366ddc069444a2af3f4d1872a"><div class="ttname"><a href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">userControlls</a></div><div class="ttdeci">task userControlls()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00503">functions.c:503</a></div></div>
 <div class="ttc" id="functions_8c_html_a6633d9d8f3bfb3e6e4b05dbbc1599e9c"><div class="ttname"><a href="functions_8c.html#a6633d9d8f3bfb3e6e4b05dbbc1599e9c">driveByEncoder</a></div><div class="ttdeci">int driveByEncoder(int encoder_count, int timeout_in_seconds=5, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00167">functions.c:167</a></div></div>
 <div class="ttc" id="functions_8c_html_a5ecfe5536c8ea4eb1fb1d4096219076e"><div class="ttname"><a href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a></div><div class="ttdeci">task lockLeftSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00226">functions.c:226</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2015 21:00:00 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2015 23:42:24 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

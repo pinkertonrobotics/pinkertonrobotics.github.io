@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lockleftside',['lockLeftSide',['../functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e',1,'functions.c']]],
-  ['lockrightside',['lockRightSide',['../functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945',1,'functions.c']]]
+  ['ispromode',['isProMode',['../main_8c.html#a9216b776f343cc96a978211719c0a3b9',1,'main.c']]]
 ];

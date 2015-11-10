@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -143,6 +143,8 @@ Functions</h2></td></tr>
 <tr class="separator:acb22ab198756eb13e6a692e73dc98b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc35ba366ddc069444a2af3f4d1872a"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a9dc35ba366ddc069444a2af3f4d1872a">userControlls</a> ()</td></tr>
 <tr class="separator:a9dc35ba366ddc069444a2af3f4d1872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6344f6e03d2f0a9a4ad01f26011398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a8c6344f6e03d2f0a9a4ad01f26011398">writeToLCD</a> (bool <a class="el" href="main_8c.html#a9216b776f343cc96a978211719c0a3b9">isProMode</a>)</td></tr>
+<tr class="separator:a8c6344f6e03d2f0a9a4ad01f26011398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all functions to be used by the competition code. </p>
@@ -749,14 +751,40 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section warning"><dt>Warning</dt><dd>This task currently does nothing</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Kyle Moran <a href="#" onclick="location.href='mai'+'lto:'+'kyl'+'e@'+'lla'+'ma'+'cha'+'ir'+'.co'+'m'; return false;">kyle@<span style="display: none;">.nosp@m.</span>llam<span style="display: none;">.nosp@m.</span>achai<span style="display: none;">.nosp@m.</span>r.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00504">504</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00503">503</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c6344f6e03d2f0a9a4ad01f26011398"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeToLCD </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isProMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LCD write function</p>
+<dl class="section author"><dt>Author</dt><dd>Spencer Couture <a href="#" onclick="location.href='mai'+'lto:'+'spe'+'nc'+'e.c'+'ou'+'tur'+'e@'+'gma'+'il'+'.co'+'m'; return false;">spenc<span style="display: none;">.nosp@m.</span>e.co<span style="display: none;">.nosp@m.</span>uture<span style="display: none;">.nosp@m.</span>@gma<span style="display: none;">.nosp@m.</span>il.co<span style="display: none;">.nosp@m.</span>m</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isProMode</td><td>bool, if the mode is pro or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00519">519</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 10 2015 21:00:00 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2015 23:42:24 for 241B Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
