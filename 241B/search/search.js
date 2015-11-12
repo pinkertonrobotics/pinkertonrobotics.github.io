@@ -7,11 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "abcdfilmrstuw",
+  0: "abcdflmprstu",
   1: "fm",
-  2: "abcdflrstuw",
-  3: "i",
-  4: "mt"
+  2: "abcdflprstu",
+  3: "mt"
 };
 
 var indexSectionNames =
@@ -19,8 +18,7 @@ var indexSectionNames =
   0: "all",
   1: "files",
   2: "functions",
-  3: "variables",
-  4: "defines"
+  3: "defines"
 };
 
 function convertToId(search)
