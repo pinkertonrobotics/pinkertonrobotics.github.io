@@ -408,99 +408,99 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <a class="code" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a>();</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;}</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="keywordtype">void</span> turnRightTicks(<span class="keywordtype">int</span> ticks, <span class="keywordtype">float</span> speed=118)</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    SensorValue[encoderL]=0;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordflow">while</span>(SensorValue[encoderL]&lt;ticks)</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        motor[frontl] = speed;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        motor[backl] = speed;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        motor[frontr] = -speed;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        motor[backr] = -speed;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    }</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;}</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keywordtype">void</span> turnLeftTicks(<span class="keywordtype">int</span> ticks, <span class="keywordtype">float</span> speed=118)</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;{</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    SensorValue[encoderR]=0;</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordflow">while</span>(SensorValue[encoderR]&lt;ticks)</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    {</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        motor[frontl] = -speed;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        motor[backl] = -speed;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        motor[frontr] = speed;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        motor[backr] = speed;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;}</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
-<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">  510</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> speed=118)</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="comment">//Since turn right, we want to set left motors forwards and right motors backwards.</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a>=speed;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a>=speed;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <a class="code" href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a>=-speed;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>=-speed;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <a class="code" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a>(); <span class="comment">//Stop</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;}</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
-<div class="line"><a name="l00530"></a><span class="lineno"><a class="line" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">  530</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> speed=118)</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;{</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">//Since turn left, we want to set the right motors forward and the left motors backwards</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a> = -speed;</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a> = -speed;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a> = speed;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a> = speed;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <a class="code" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a>(); <span class="comment">//Stop</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="line"><a name="l00547"></a><span class="lineno"><a class="line" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">  547</a></span>&#160;task <a class="code" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a>(){</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        motor[backr]  = <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        motor[backl]  = <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a>;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        motor[frontl] = <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a>;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        motor[frontr] = <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    }</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;}</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;<span class="comment">//                                 Flywheel</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00572"></a><span class="lineno"><a class="line" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">  572</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a>(<span class="keywordtype">float</span> speed, <span class="keywordtype">int</span> seconds){</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;  <span class="keywordtype">int</span> power = 0;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 21; i++){</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    motor[flyR1] = power;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    motor[flyR2] = power;</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    motor[flyL1] = power;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    motor[flyL2] = power;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    power = power + (speed/20);</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    wait1Msec(seconds/20);</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  }</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  motor[flyR1] = speed-1;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  motor[flyR2] = speed;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  motor[flyL1] = speed-1;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  motor[flyL2] = speed;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;}</div>
+<div class="line"><a name="l00484"></a><span class="lineno"><a class="line" href="functions_8c.html#a9eb766f7a74b0e3ae6cc88eecee55282">  484</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a9eb766f7a74b0e3ae6cc88eecee55282">turnRightTicks</a>(<span class="keywordtype">int</span> ticks, <span class="keywordtype">float</span> speed=118)</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;{</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    SensorValue[encoderL]=0;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">while</span>(SensorValue[encoderL]&lt;ticks)</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    {</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        motor[frontl] = speed;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        motor[backl] = speed;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        motor[frontr] = -speed;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        motor[backr] = -speed;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno"><a class="line" href="functions_8c.html#a7770f47c49b1afb6912978fd649f01c8">  506</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a7770f47c49b1afb6912978fd649f01c8">turnLeftTicks</a>(<span class="keywordtype">int</span> ticks, <span class="keywordtype">float</span> speed=118)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;{</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    SensorValue[encoderR]=0;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">while</span>(SensorValue[encoderR]&lt;ticks)</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    {</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        motor[frontl] = -speed;</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        motor[backl] = -speed;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        motor[frontr] = speed;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        motor[backr] = speed;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    }</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;}</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno"><a class="line" href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">  529</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> speed=118)</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;{</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="comment">//Since turn right, we want to set left motors forwards and right motors backwards.</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a>=speed;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a>=speed;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a>=-speed;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>=-speed;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a>(); <span class="comment">//Stop</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;}</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
+<div class="line"><a name="l00549"></a><span class="lineno"><a class="line" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">  549</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a>(<span class="keywordtype">float</span> seconds, <span class="keywordtype">float</span> speed=118)</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;{</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="comment">//Since turn left, we want to set the right motors forward and the left motors backwards</span></div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a> = -speed;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a> = -speed;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <a class="code" href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a> = speed;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a> = speed;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    wait1Msec(seconds*1000); <span class="comment">//Wait desired amount of time</span></div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <a class="code" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a>(); <span class="comment">//Stop</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
+<div class="line"><a name="l00566"></a><span class="lineno"><a class="line" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">  566</a></span>&#160;task <a class="code" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a>(){</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        motor[backr]  = <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        motor[backl]  = <a class="code" href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a>;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        motor[frontl] = <a class="code" href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a>;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        motor[frontr] = <a class="code" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a>;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    }</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;}</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">//                                 Flywheel</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00591"></a><span class="lineno"><a class="line" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">  591</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a>(<span class="keywordtype">float</span> speed, <span class="keywordtype">int</span> seconds){</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  <span class="keywordtype">int</span> power = 0;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 21; i++){</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    motor[flyR1] = power;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    motor[flyR2] = power;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    motor[flyL1] = power;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    motor[flyL2] = power;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    power = power + (speed/20);</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    wait1Msec(seconds/20);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  }</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;  motor[flyR1] = speed-1;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  motor[flyR2] = speed;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  motor[flyL1] = speed-1;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  motor[flyL2] = speed;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;}</div>
 <div class="ttc" id="functions_8c_html_a507906c16b5891f1d2ac958eaae6e734"><div class="ttname"><a href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00398">functions.c:398</a></div></div>
-<div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00547">functions.c:547</a></div></div>
+<div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00566">functions.c:566</a></div></div>
 <div class="ttc" id="functions_8c_html_aaf5a5fb405343531462600db0961eb04"><div class="ttname"><a href="functions_8c.html#aaf5a5fb405343531462600db0961eb04">turnLeftDegrees</a></div><div class="ttdeci">void turnLeftDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00441">functions.c:441</a></div></div>
 <div class="ttc" id="functions_8c_html_af194b09415de58a940ea08b54fb45e45"><div class="ttname"><a href="functions_8c.html#af194b09415de58a940ea08b54fb45e45">frontLeftVal</a></div><div class="ttdeci">int frontLeftVal</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00040">functions.c:40</a></div></div>
 <div class="ttc" id="functions_8c_html_a0d25f246c45a7aefd6395283e8bed95c"><div class="ttname"><a href="functions_8c.html#a0d25f246c45a7aefd6395283e8bed95c">setMotorsRight</a></div><div class="ttdeci">void setMotorsRight(int speed)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00104">functions.c:104</a></div></div>
-<div class="ttc" id="functions_8c_html_a78865695e4268d88e03b81d60c9ce8fb"><div class="ttname"><a href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a></div><div class="ttdeci">void turnLeftSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00530">functions.c:530</a></div></div>
+<div class="ttc" id="functions_8c_html_a9eb766f7a74b0e3ae6cc88eecee55282"><div class="ttname"><a href="functions_8c.html#a9eb766f7a74b0e3ae6cc88eecee55282">turnRightTicks</a></div><div class="ttdeci">void turnRightTicks(int ticks, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00484">functions.c:484</a></div></div>
+<div class="ttc" id="functions_8c_html_a78865695e4268d88e03b81d60c9ce8fb"><div class="ttname"><a href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a></div><div class="ttdeci">void turnLeftSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00549">functions.c:549</a></div></div>
 <div class="ttc" id="functions_8c_html_ae8928ecb6e329e271103545d5ca3aa89"><div class="ttname"><a href="functions_8c.html#ae8928ecb6e329e271103545d5ca3aa89">fancyTurnLeftDegrees</a></div><div class="ttdeci">void fancyTurnLeftDegrees(int degrees, bool forward=true, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00360">functions.c:360</a></div></div>
-<div class="ttc" id="functions_8c_html_a4585d4c8cf21ef945b41e8601fe2e92b"><div class="ttname"><a href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a></div><div class="ttdeci">void spin_flywheel(float speed, int seconds)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00572">functions.c:572</a></div></div>
+<div class="ttc" id="functions_8c_html_a4585d4c8cf21ef945b41e8601fe2e92b"><div class="ttname"><a href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a></div><div class="ttdeci">void spin_flywheel(float speed, int seconds)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00591">functions.c:591</a></div></div>
 <div class="ttc" id="functions_8c_html_a8026df343e28c863be07cbc4bfca246a"><div class="ttname"><a href="functions_8c.html#a8026df343e28c863be07cbc4bfca246a">backwardSeconds</a></div><div class="ttdeci">void backwardSeconds(float seconds, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00156">functions.c:156</a></div></div>
 <div class="ttc" id="functions_8c_html_a19e059ac26fceeabb21bf022a931fd0d"><div class="ttname"><a href="functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d">setMotorsLeft</a></div><div class="ttdeci">void setMotorsLeft(int speed)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00090">functions.c:90</a></div></div>
 <div class="ttc" id="functions_8c_html_a01c0ecb98bc61237b85a3f168f6b19be"><div class="ttname"><a href="functions_8c.html#a01c0ecb98bc61237b85a3f168f6b19be">fancyTurnRightDegrees</a></div><div class="ttdeci">void fancyTurnRightDegrees(int degrees, bool forward=true, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00320">functions.c:320</a></div></div>
 <div class="ttc" id="functions_8c_html_ad8ed41f25272dc6aad41f3d0faac7dff"><div class="ttname"><a href="functions_8c.html#ad8ed41f25272dc6aad41f3d0faac7dff">setMotors</a></div><div class="ttdeci">void setMotors(int speed)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00073">functions.c:73</a></div></div>
 <div class="ttc" id="functions_8c_html_a2969e9dad58b1f36d8c25daf1d308945"><div class="ttname"><a href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a></div><div class="ttdeci">task lockRightSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00292">functions.c:292</a></div></div>
 <div class="ttc" id="functions_8c_html_a5359725727b9a0e2588f4790da94b43e"><div class="ttname"><a href="functions_8c.html#a5359725727b9a0e2588f4790da94b43e">TIMEOUT_CNT_PER_SEC</a></div><div class="ttdeci">#define TIMEOUT_CNT_PER_SEC</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00037">functions.c:37</a></div></div>
-<div class="ttc" id="functions_8c_html_a395c992d0024bc009c3b2f2817fab76e"><div class="ttname"><a href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00510">functions.c:510</a></div></div>
+<div class="ttc" id="functions_8c_html_a395c992d0024bc009c3b2f2817fab76e"><div class="ttname"><a href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00529">functions.c:529</a></div></div>
 <div class="ttc" id="functions_8c_html_a26104fc1c8e80e3f363032ca406d711a"><div class="ttname"><a href="functions_8c.html#a26104fc1c8e80e3f363032ca406d711a">testMotors</a></div><div class="ttdeci">void testMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00114">functions.c:114</a></div></div>
 <div class="ttc" id="functions_8c_html_acc1d6ebc5509da9902714de72ecbf1bd"><div class="ttname"><a href="functions_8c.html#acc1d6ebc5509da9902714de72ecbf1bd">MOTOR_SPEED</a></div><div class="ttdeci">#define MOTOR_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00038">functions.c:38</a></div></div>
 <div class="ttc" id="functions_8c_html_ac2eb4a095e5d2e52f1144b6be05d2b38"><div class="ttname"><a href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a></div><div class="ttdeci">void clearMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00058">functions.c:58</a></div></div>
@@ -509,11 +509,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="functions_8c_html_af06338b8099a283968f0fa668c443a35"><div class="ttname"><a href="functions_8c.html#af06338b8099a283968f0fa668c443a35">backLeftVal</a></div><div class="ttdeci">int backLeftVal</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00041">functions.c:41</a></div></div>
 <div class="ttc" id="functions_8c_html_a6633d9d8f3bfb3e6e4b05dbbc1599e9c"><div class="ttname"><a href="functions_8c.html#a6633d9d8f3bfb3e6e4b05dbbc1599e9c">driveByEncoder</a></div><div class="ttdeci">int driveByEncoder(int encoder_count, int timeout_in_seconds=5, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00174">functions.c:174</a></div></div>
 <div class="ttc" id="functions_8c_html_a5ecfe5536c8ea4eb1fb1d4096219076e"><div class="ttname"><a href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">lockLeftSide</a></div><div class="ttdeci">task lockLeftSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00268">functions.c:268</a></div></div>
+<div class="ttc" id="functions_8c_html_a7770f47c49b1afb6912978fd649f01c8"><div class="ttname"><a href="functions_8c.html#a7770f47c49b1afb6912978fd649f01c8">turnLeftTicks</a></div><div class="ttdeci">void turnLeftTicks(int ticks, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00506">functions.c:506</a></div></div>
 <div class="ttc" id="functions_8c_html_a683fab8392bf7150508c840977066645"><div class="ttname"><a href="functions_8c.html#a683fab8392bf7150508c840977066645">frontRightVal</a></div><div class="ttdeci">int frontRightVal</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00042">functions.c:42</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 18:30:38 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 14 2015 18:34:59 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
