@@ -469,8 +469,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="comment">//                                 Flywheel</span></div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00591"></a><span class="lineno"><a class="line" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">  591</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a>(<span class="keywordtype">float</span> speed, <span class="keywordtype">int</span> seconds){</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  <span class="keywordtype">int</span> power = 0;</div>
+<div class="line"><a name="l00591"></a><span class="lineno"><a class="line" href="functions_8c.html#ab860d1c92357b7ac086603c58a27534d">  591</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8c.html#ab860d1c92357b7ac086603c58a27534d">spin_flywheel</a>(<span class="keywordtype">float</span> initial=0, <span class="keywordtype">float</span> speed, <span class="keywordtype">int</span> seconds){</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  <span class="keywordtype">int</span> power = initial;</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 21; i++){</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    motor[flyR1] = power;</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    motor[flyR2] = power;</div>
@@ -480,9 +480,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    wait1Msec(seconds/20);</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  }</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;  motor[flyR1] = speed-1;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;  motor[flyR1] = speed;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  motor[flyR2] = speed;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  motor[flyL1] = speed-1;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  motor[flyL1] = speed;</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  motor[flyL2] = speed;</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;}</div>
 <div class="ttc" id="functions_8c_html_a507906c16b5891f1d2ac958eaae6e734"><div class="ttname"><a href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00398">functions.c:398</a></div></div>
@@ -493,7 +493,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="functions_8c_html_a9eb766f7a74b0e3ae6cc88eecee55282"><div class="ttname"><a href="functions_8c.html#a9eb766f7a74b0e3ae6cc88eecee55282">turnRightTicks</a></div><div class="ttdeci">void turnRightTicks(int ticks, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00484">functions.c:484</a></div></div>
 <div class="ttc" id="functions_8c_html_a78865695e4268d88e03b81d60c9ce8fb"><div class="ttname"><a href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a></div><div class="ttdeci">void turnLeftSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00549">functions.c:549</a></div></div>
 <div class="ttc" id="functions_8c_html_ae8928ecb6e329e271103545d5ca3aa89"><div class="ttname"><a href="functions_8c.html#ae8928ecb6e329e271103545d5ca3aa89">fancyTurnLeftDegrees</a></div><div class="ttdeci">void fancyTurnLeftDegrees(int degrees, bool forward=true, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00360">functions.c:360</a></div></div>
-<div class="ttc" id="functions_8c_html_a4585d4c8cf21ef945b41e8601fe2e92b"><div class="ttname"><a href="functions_8c.html#a4585d4c8cf21ef945b41e8601fe2e92b">spin_flywheel</a></div><div class="ttdeci">void spin_flywheel(float speed, int seconds)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00591">functions.c:591</a></div></div>
 <div class="ttc" id="functions_8c_html_a8026df343e28c863be07cbc4bfca246a"><div class="ttname"><a href="functions_8c.html#a8026df343e28c863be07cbc4bfca246a">backwardSeconds</a></div><div class="ttdeci">void backwardSeconds(float seconds, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00156">functions.c:156</a></div></div>
 <div class="ttc" id="functions_8c_html_a19e059ac26fceeabb21bf022a931fd0d"><div class="ttname"><a href="functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d">setMotorsLeft</a></div><div class="ttdeci">void setMotorsLeft(int speed)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00090">functions.c:90</a></div></div>
 <div class="ttc" id="functions_8c_html_a01c0ecb98bc61237b85a3f168f6b19be"><div class="ttname"><a href="functions_8c.html#a01c0ecb98bc61237b85a3f168f6b19be">fancyTurnRightDegrees</a></div><div class="ttdeci">void fancyTurnRightDegrees(int degrees, bool forward=true, int speed=MOTOR_SPEED)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00320">functions.c:320</a></div></div>
@@ -501,6 +500,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="functions_8c_html_a2969e9dad58b1f36d8c25daf1d308945"><div class="ttname"><a href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">lockRightSide</a></div><div class="ttdeci">task lockRightSide()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00292">functions.c:292</a></div></div>
 <div class="ttc" id="functions_8c_html_a5359725727b9a0e2588f4790da94b43e"><div class="ttname"><a href="functions_8c.html#a5359725727b9a0e2588f4790da94b43e">TIMEOUT_CNT_PER_SEC</a></div><div class="ttdeci">#define TIMEOUT_CNT_PER_SEC</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00037">functions.c:37</a></div></div>
 <div class="ttc" id="functions_8c_html_a395c992d0024bc009c3b2f2817fab76e"><div class="ttname"><a href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">turnRightSeconds</a></div><div class="ttdeci">void turnRightSeconds(float seconds, float speed=118)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00529">functions.c:529</a></div></div>
+<div class="ttc" id="functions_8c_html_ab860d1c92357b7ac086603c58a27534d"><div class="ttname"><a href="functions_8c.html#ab860d1c92357b7ac086603c58a27534d">spin_flywheel</a></div><div class="ttdeci">void spin_flywheel(float initial=0, float speed, int seconds)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00591">functions.c:591</a></div></div>
 <div class="ttc" id="functions_8c_html_a26104fc1c8e80e3f363032ca406d711a"><div class="ttname"><a href="functions_8c.html#a26104fc1c8e80e3f363032ca406d711a">testMotors</a></div><div class="ttdeci">void testMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00114">functions.c:114</a></div></div>
 <div class="ttc" id="functions_8c_html_acc1d6ebc5509da9902714de72ecbf1bd"><div class="ttname"><a href="functions_8c.html#acc1d6ebc5509da9902714de72ecbf1bd">MOTOR_SPEED</a></div><div class="ttdeci">#define MOTOR_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00038">functions.c:38</a></div></div>
 <div class="ttc" id="functions_8c_html_ac2eb4a095e5d2e52f1144b6be05d2b38"><div class="ttname"><a href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">clearMotors</a></div><div class="ttdeci">void clearMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00058">functions.c:58</a></div></div>
@@ -514,7 +514,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2015 18:34:59 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 14 2015 22:56:04 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
