@@ -7,9 +7,9 @@
 
 var indexSectionsWithContent =
 {
-  0: "abcdfilmpstu",
+  0: "abcdfilmprstu",
   1: "fm",
-  2: "abcdfilpstu",
+  2: "abcdfilprstu",
   3: "bf",
   4: "mt"
 };

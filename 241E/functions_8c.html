@@ -140,6 +140,8 @@ Functions</h2></td></tr>
 <tr class="separator:a395c992d0024bc009c3b2f2817fab76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78865695e4268d88e03b81d60c9ce8fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">turnLeftSeconds</a> (float seconds, float speed=118)</td></tr>
 <tr class="separator:a78865695e4268d88e03b81d60c9ce8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb22ab198756eb13e6a692e73dc98b3b"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a> ()</td></tr>
+<tr class="separator:acb22ab198756eb13e6a692e73dc98b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67c9c1709bc290560a6337943c649cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#ae67c9c1709bc290560a6337943c649cc">auto_drive_forward</a> (float speed, float secs)</td></tr>
 <tr class="separator:ae67c9c1709bc290560a6337943c649cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04bbe7ad15e04e0c810a9481211e0742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a04bbe7ad15e04e0c810a9481211e0742">spin_flywheel</a> (float f)</td></tr>
@@ -168,6 +170,8 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all functions to be used by the competition code. </p>
+<dl class="section warning"><dt>Warning</dt><dd>DO NOT compile this file by itself, it will not work. Instead, save it and compile <a class="el" href="main_8c.html" title="This file contains the base for competiton code. ">main.c</a></dd></dl>
+<p>Also, you must include your motor and sensor setup somewhere in this file.</p>
 <dl class="section warning"><dt>Warning</dt><dd>DO NOT compile this file by itself, it will not work. Instead, save it and compile <a class="el" href="main_8c.html" title="This file contains the base for competiton code. ">main.c</a></dd></dl>
 <p>Also, you must include your motor and sensor setup somewhere in this file.</p>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd>
@@ -232,10 +236,8 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the motors to the current values</p>
-<dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> Drives the bot forward a given amount of seconds</dd>
-<dd>
-Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'rd'+'on@'+'gm'+'ail'+'.c'+'om'; return false;">marcd<span style="display: none;">.nosp@m.</span>rear<span style="display: none;">.nosp@m.</span>don@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a></dd></dl>
+<p>Drives the bot forward a given amount of seconds</p>
+<dl class="section author"><dt>Author</dt><dd>Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'rd'+'on@'+'gm'+'ail'+'.c'+'om'; return false;">marcd<span style="display: none;">.nosp@m.</span>rear<span style="display: none;">.nosp@m.</span>don@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">secs</td><td>amount of seconds to go forward </td></tr>
@@ -244,7 +246,7 @@ Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'r
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00505">505</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00513">513</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -281,7 +283,7 @@ Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'r
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00603">603</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00611">611</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -325,7 +327,7 @@ Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'r
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00560">560</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00568">568</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -402,7 +404,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Uses two different buttons to switch on/off reverse drive</p>
 <dl class="section author"><dt>Author</dt><dd>Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'rd'+'on@'+'gm'+'ail'+'.c'+'om'; return false;">marcd<span style="display: none;">.nosp@m.</span>rear<span style="display: none;">.nosp@m.</span>don@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00790">790</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00794">794</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -559,7 +561,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Uses one button to toggle on/off for flywheel Uses three buttons to change speed modes</p>
 <dl class="section author"><dt>Author</dt><dd>Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'rd'+'on@'+'gm'+'ail'+'.c'+'om'; return false;">marcd<span style="display: none;">.nosp@m.</span>rear<span style="display: none;">.nosp@m.</span>don@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00679">679</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00687">687</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -615,7 +617,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Uses one button to toggle on/off for intake</p>
 <dl class="section author"><dt>Author</dt><dd>Marc Reardon <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'cd'+'rea'+'rd'+'on@'+'gm'+'ail'+'.c'+'om'; return false;">marcd<span style="display: none;">.nosp@m.</span>rear<span style="display: none;">.nosp@m.</span>don@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00625">625</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00633">633</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -656,6 +658,25 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="functions_8c_source.html#l00259">259</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb22ab198756eb13e6a692e73dc98b3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">task runMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the motors to the current values</p>
+<dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00488">488</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -763,7 +784,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00526">526</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00534">534</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1024,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 3 2015 21:15:00 for 241E Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 8 2015 21:15:01 for 241E Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
