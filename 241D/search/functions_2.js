@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['clearmotors',['clearMotors',['../functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38',1,'functions.c']]]
+  ['iscocked',['isCocked',['../functions_8c.html#a1c8058feb63991ed790d448726879225',1,'functions.c']]],
+  ['isloaded',['isLoaded',['../functions_8c.html#a745ba4209690727e00e216b25219e9d5',1,'functions.c']]]
 ];

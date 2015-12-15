@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,45 +98,217 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a745ba4209690727e00e216b25219e9d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a745ba4209690727e00e216b25219e9d5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>isLoaded</b> ()</td></tr>
+<tr class="memitem:a745ba4209690727e00e216b25219e9d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a745ba4209690727e00e216b25219e9d5">isLoaded</a> ()</td></tr>
 <tr class="separator:a745ba4209690727e00e216b25219e9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c8058feb63991ed790d448726879225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c8058feb63991ed790d448726879225"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>isCocked</b> ()</td></tr>
+<tr class="memitem:a1c8058feb63991ed790d448726879225"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a1c8058feb63991ed790d448726879225">isCocked</a> ()</td></tr>
 <tr class="separator:a1c8058feb63991ed790d448726879225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b47a22cef7f76a0e37afd86ccec6594"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b47a22cef7f76a0e37afd86ccec6594"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>startLaunchMotors</b> ()</td></tr>
+<tr class="memitem:a6b47a22cef7f76a0e37afd86ccec6594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a> ()</td></tr>
 <tr class="separator:a6b47a22cef7f76a0e37afd86ccec6594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c4584d7a27d097a3d378a0cb134547"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5c4584d7a27d097a3d378a0cb134547"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stopLaunchMotors</b> ()</td></tr>
+<tr class="memitem:ad5c4584d7a27d097a3d378a0cb134547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a> ()</td></tr>
 <tr class="separator:ad5c4584d7a27d097a3d378a0cb134547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40f5b3436be1fb5b7ae10a12a56a102c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40f5b3436be1fb5b7ae10a12a56a102c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>startIntakeMotors</b> ()</td></tr>
+<tr class="memitem:a40f5b3436be1fb5b7ae10a12a56a102c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a> ()</td></tr>
 <tr class="separator:a40f5b3436be1fb5b7ae10a12a56a102c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08fcbf8aee781b11be9271b410a3b4c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08fcbf8aee781b11be9271b410a3b4c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reverseIntakeMotors</b> ()</td></tr>
+<tr class="memitem:a08fcbf8aee781b11be9271b410a3b4c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a> ()</td></tr>
 <tr class="separator:a08fcbf8aee781b11be9271b410a3b4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e077a3a7f1e795b35cee21662b8c17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9e077a3a7f1e795b35cee21662b8c17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stopIntakeMotors</b> ()</td></tr>
+<tr class="memitem:ad9e077a3a7f1e795b35cee21662b8c17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a> ()</td></tr>
 <tr class="separator:ad9e077a3a7f1e795b35cee21662b8c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd1c24e20c1e2f5e63949ac63f965347"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd1c24e20c1e2f5e63949ac63f965347"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadNautilus</b> ()</td></tr>
+<tr class="memitem:abd1c24e20c1e2f5e63949ac63f965347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#abd1c24e20c1e2f5e63949ac63f965347">loadNautilus</a> ()</td></tr>
 <tr class="separator:abd1c24e20c1e2f5e63949ac63f965347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a365c57dbc3fdb20c8e629342f54b807a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a365c57dbc3fdb20c8e629342f54b807a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cockNautilus</b> ()</td></tr>
+<tr class="memitem:a365c57dbc3fdb20c8e629342f54b807a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a365c57dbc3fdb20c8e629342f54b807a">cockNautilus</a> ()</td></tr>
 <tr class="separator:a365c57dbc3fdb20c8e629342f54b807a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bffe52ba327e1649896463186f8d4f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bffe52ba327e1649896463186f8d4f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fireNautilus</b> ()</td></tr>
+<tr class="memitem:a4bffe52ba327e1649896463186f8d4f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a4bffe52ba327e1649896463186f8d4f8">fireNautilus</a> ()</td></tr>
 <tr class="separator:a4bffe52ba327e1649896463186f8d4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Created on: Dec 8, 2015 Author: tim </p>
+<div class="textblock"><p>API functions created by us specifically for our robot</p>
+<p>Created on: Dec 8, 2015 Author: tim </p>
 
 <p>Definition in file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a365c57dbc3fdb20c8e629342f54b807a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cockNautilus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cocks the nautilus but does not fire </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00082">82</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bffe52ba327e1649896463186f8d4f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fireNautilus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fires the launcher </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00092">92</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c8058feb63991ed790d448726879225"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isCocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>checks if nautilus is cocked </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00024">24</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a745ba4209690727e00e216b25219e9d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isLoaded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if nautilus is loaded with a ball </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00017">17</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd1c24e20c1e2f5e63949ac63f965347"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadNautilus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>loads ball into nautilus from intake </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00071">71</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08fcbf8aee781b11be9271b410a3b4c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reverseIntakeMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>reverses intake </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00055">55</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40f5b3436be1fb5b7ae10a12a56a102c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startIntakeMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>intake balls + load launcher </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00047">47</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b47a22cef7f76a0e37afd86ccec6594"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startLaunchMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>runs launcher motors at normal speed </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00031">31</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad9e077a3a7f1e795b35cee21662b8c17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopIntakeMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>stop intake motors </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00063">63</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5c4584d7a27d097a3d378a0cb134547"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopLaunchMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>stops launcher motors </p>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00039">39</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 10 2015 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 20:05:04 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

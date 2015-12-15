@@ -69,8 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="globals.html"><span>All</span></a></li>
       <li class="current"><a href="globals_func.html"><span>Functions</span></a></li>
-      <li><a href="globals_vars.html"><span>Variables</span></a></li>
-      <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -79,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,71 +88,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 &#160;<ul>
-<li>autonomous()
-: <a class="el" href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">main.c</a>
+<li>cockNautilus()
+: <a class="el" href="functions_8c.html#a365c57dbc3fdb20c8e629342f54b807a">functions.c</a>
 </li>
-<li>backwardSeconds()
-: <a class="el" href="functions_8c.html#a8026df343e28c863be07cbc4bfca246a">functions.c</a>
+<li>fireNautilus()
+: <a class="el" href="functions_8c.html#a4bffe52ba327e1649896463186f8d4f8">functions.c</a>
 </li>
-<li>clearMotors()
-: <a class="el" href="functions_8c.html#ac2eb4a095e5d2e52f1144b6be05d2b38">functions.c</a>
+<li>isCocked()
+: <a class="el" href="functions_8c.html#a1c8058feb63991ed790d448726879225">functions.c</a>
 </li>
-<li>driveByEncoder()
-: <a class="el" href="functions_8c.html#a6633d9d8f3bfb3e6e4b05dbbc1599e9c">functions.c</a>
+<li>isLoaded()
+: <a class="el" href="functions_8c.html#a745ba4209690727e00e216b25219e9d5">functions.c</a>
 </li>
-<li>fancyTurnLeftDegrees()
-: <a class="el" href="functions_8c.html#ae8928ecb6e329e271103545d5ca3aa89">functions.c</a>
+<li>loadNautilus()
+: <a class="el" href="functions_8c.html#abd1c24e20c1e2f5e63949ac63f965347">functions.c</a>
 </li>
-<li>fancyTurnRightDegrees()
-: <a class="el" href="functions_8c.html#a01c0ecb98bc61237b85a3f168f6b19be">functions.c</a>
+<li>reverseIntakeMotors()
+: <a class="el" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">functions.c</a>
 </li>
-<li>forwardSeconds()
-: <a class="el" href="functions_8c.html#a82e3454b7f0485deac91263a5a79ce7b">functions.c</a>
+<li>startIntakeMotors()
+: <a class="el" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">functions.c</a>
 </li>
-<li>lockLeftSide()
-: <a class="el" href="functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e">functions.c</a>
+<li>startLaunchMotors()
+: <a class="el" href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">functions.c</a>
 </li>
-<li>lockRightSide()
-: <a class="el" href="functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945">functions.c</a>
+<li>stopIntakeMotors()
+: <a class="el" href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">functions.c</a>
 </li>
-<li>pre_auton()
-: <a class="el" href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">main.c</a>
-</li>
-<li>runMotors()
-: <a class="el" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">functions.c</a>
-</li>
-<li>setMotors()
-: <a class="el" href="functions_8c.html#ad8ed41f25272dc6aad41f3d0faac7dff">functions.c</a>
-</li>
-<li>setMotorsLeft()
-: <a class="el" href="functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d">functions.c</a>
-</li>
-<li>setMotorsRight()
-: <a class="el" href="functions_8c.html#a0d25f246c45a7aefd6395283e8bed95c">functions.c</a>
-</li>
-<li>testMotors()
-: <a class="el" href="functions_8c.html#a26104fc1c8e80e3f363032ca406d711a">functions.c</a>
-</li>
-<li>turnLeftDegrees()
-: <a class="el" href="functions_8c.html#aaf5a5fb405343531462600db0961eb04">functions.c</a>
-</li>
-<li>turnLeftSeconds()
-: <a class="el" href="functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb">functions.c</a>
-</li>
-<li>turnRightDegrees()
-: <a class="el" href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">functions.c</a>
-</li>
-<li>turnRightSeconds()
-: <a class="el" href="functions_8c.html#a395c992d0024bc009c3b2f2817fab76e">functions.c</a>
-</li>
-<li>usercontrol()
-: <a class="el" href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">main.c</a>
+<li>stopLaunchMotors()
+: <a class="el" href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">functions.c</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 29 2015 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 20:05:04 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

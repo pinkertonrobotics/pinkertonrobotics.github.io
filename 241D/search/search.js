@@ -7,14 +7,16 @@
 
 var indexSectionsWithContent =
 {
-  0: "afio",
-  1: "afio"
+  0: "acfilors",
+  1: "afio",
+  2: "cfilrs"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files"
+  1: "files",
+  2: "functions"
 };
 
 function convertToId(search)

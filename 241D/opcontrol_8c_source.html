@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,21 +125,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//INTAKE CONTROL</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_DOWN)){ <span class="comment">//spin intake foreward</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            startIntakeMotors();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a>();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_UP)){  <span class="comment">//spin inatke backwards</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            reverseIntakeMotors();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a>();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span>{<span class="comment">//STOP INTAKE</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            stopIntakeMotors();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a>();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//LAUNCHER CONTROL</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (joystickGetDigital(1, 6, JOY_DOWN)){</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            startLaunchMotors();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a>();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span> {                          <span class="comment">//STOP LAUNCH MOTORS</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            stopLaunchMotors();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        delay(5);</div>
@@ -146,11 +147,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="ttc" id="functions_8c_html_ad5c4584d7a27d097a3d378a0cb134547"><div class="ttname"><a href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a></div><div class="ttdeci">void stopLaunchMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00039">functions.c:39</a></div></div>
+<div class="ttc" id="functions_8c_html_ad9e077a3a7f1e795b35cee21662b8c17"><div class="ttname"><a href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a></div><div class="ttdeci">void stopIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00063">functions.c:63</a></div></div>
+<div class="ttc" id="functions_8c_html_a40f5b3436be1fb5b7ae10a12a56a102c"><div class="ttname"><a href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a></div><div class="ttdeci">void startIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00047">functions.c:47</a></div></div>
+<div class="ttc" id="functions_8c_html_a6b47a22cef7f76a0e37afd86ccec6594"><div class="ttname"><a href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a></div><div class="ttdeci">void startLaunchMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00031">functions.c:31</a></div></div>
+<div class="ttc" id="functions_8c_html_a08fcbf8aee781b11be9271b410a3b4c2"><div class="ttname"><a href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a></div><div class="ttdeci">void reverseIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00055">functions.c:55</a></div></div>
 <div class="ttc" id="functions_8c_html"><div class="ttname"><a href="functions_8c.html">functions.c</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 10 2015 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 20:05:04 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
