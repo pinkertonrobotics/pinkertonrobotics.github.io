@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_2ec',['init.c',['../init_8c.html',1,'']]]
+  ['opcontrol_2ec',['opcontrol.c',['../opcontrol_8c.html',1,'']]]
 ];
