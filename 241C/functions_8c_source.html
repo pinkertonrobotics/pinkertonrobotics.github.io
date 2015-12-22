@@ -476,15 +476,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    motor[flyR2] = power;</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    motor[flyL1] = power;</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    motor[flyL2] = power;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    power = power + (speed/20);</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    wait1Msec(seconds/20);</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  }</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;  motor[flyR1] = speed;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  motor[flyR2] = speed;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  motor[flyL1] = speed;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  motor[flyL2] = speed;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;}</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    motor[topIntake] = power + (speed/4);</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    power = power + (speed/20);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    wait1Msec(seconds/20);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;  }</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  motor[flyR1] = speed;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  motor[flyR2] = speed;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  motor[flyL1] = speed;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  motor[flyL2] = speed;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;  motor[topIntake] = speed + (speed/4);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;}</div>
 <div class="ttc" id="functions_8c_html_a507906c16b5891f1d2ac958eaae6e734"><div class="ttname"><a href="functions_8c.html#a507906c16b5891f1d2ac958eaae6e734">turnRightDegrees</a></div><div class="ttdeci">void turnRightDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00398">functions.c:398</a></div></div>
 <div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00566">functions.c:566</a></div></div>
 <div class="ttc" id="functions_8c_html_aaf5a5fb405343531462600db0961eb04"><div class="ttname"><a href="functions_8c.html#aaf5a5fb405343531462600db0961eb04">turnLeftDegrees</a></div><div class="ttdeci">void turnLeftDegrees(float degree, float speed=90)</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00441">functions.c:441</a></div></div>
@@ -514,7 +516,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 21:05:00 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 22 2015 21:05:01 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
