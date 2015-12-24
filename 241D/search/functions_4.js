@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reverseintakemotors',['reverseIntakeMotors',['../functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2',1,'functions.c']]]
+  ['loadnautilus',['loadNautilus',['../functions_8c.html#abd1c24e20c1e2f5e63949ac63f965347',1,'functions.c']]]
 ];

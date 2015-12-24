@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['runmotors',['runMotors',['../functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b',1,'functions.c']]]
+  ['telemdisp',['telemDisp',['../functions_8c.html#a4c2ae0c9aea95125aa9c45a70ff4f9f9',1,'functions.c']]]
 ];
