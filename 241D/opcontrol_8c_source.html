@@ -113,50 +113,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> operatorControl() {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="functions_8c.html#a4c2ae0c9aea95125aa9c45a70ff4f9f9">telemDisp</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//DEF STUFF</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> rightDrive=joystickGetAnalog(1, 2) * dx;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> leftDrive=joystickGetAnalog(1, 3) * dx;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//MOTOR CONTROL</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        motorSet(lf, -leftDrive);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        motorSet(rf, rightDrive);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        motorSet(lb, -leftDrive);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        motorSet(rb, rightDrive);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//INTAKE CONTROL</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_DOWN)){ <span class="comment">//spin intake foreward</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_UP)){  <span class="comment">//spin inatke backwards</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span>{<span class="comment">//STOP INTAKE</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//LAUNCHER CONTROL</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (joystickGetDigital(1, 6, JOY_DOWN)){</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span> {                          <span class="comment">//STOP LAUNCH MOTORS</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        delay(5);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//DEF STUFF</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">int</span> rightDrive=joystickGetAnalog(1, 2) * dx;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> leftDrive=joystickGetAnalog(1, 3) * dx;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//MOTOR CONTROL</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        motorSet(lf, -leftDrive);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        motorSet(rf, rightDrive);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        motorSet(lb, -leftDrive);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        motorSet(rb, rightDrive);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//INTAKE CONTROL</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_DOWN)){ <span class="comment">//spin intake foreward</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_UP)){  <span class="comment">//spin inatke backwards</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span>{<span class="comment">//STOP INTAKE</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">//LAUNCHER CONTROL</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (joystickGetDigital(1, 6, JOY_DOWN)){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span> {                          <span class="comment">//STOP LAUNCH MOTORS</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        delay(5);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 <div class="ttc" id="functions_8c_html_ad5c4584d7a27d097a3d378a0cb134547"><div class="ttname"><a href="functions_8c.html#ad5c4584d7a27d097a3d378a0cb134547">stopLaunchMotors</a></div><div class="ttdeci">void stopLaunchMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00036">functions.c:36</a></div></div>
 <div class="ttc" id="functions_8c_html_ad9e077a3a7f1e795b35cee21662b8c17"><div class="ttname"><a href="functions_8c.html#ad9e077a3a7f1e795b35cee21662b8c17">stopIntakeMotors</a></div><div class="ttdeci">void stopIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00060">functions.c:60</a></div></div>
 <div class="ttc" id="functions_8c_html_a40f5b3436be1fb5b7ae10a12a56a102c"><div class="ttname"><a href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a></div><div class="ttdeci">void startIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00044">functions.c:44</a></div></div>
-<div class="ttc" id="functions_8c_html_a4c2ae0c9aea95125aa9c45a70ff4f9f9"><div class="ttname"><a href="functions_8c.html#a4c2ae0c9aea95125aa9c45a70ff4f9f9">telemDisp</a></div><div class="ttdeci">void telemDisp()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00110">functions.c:110</a></div></div>
 <div class="ttc" id="functions_8c_html_a6b47a22cef7f76a0e37afd86ccec6594"><div class="ttname"><a href="functions_8c.html#a6b47a22cef7f76a0e37afd86ccec6594">startLaunchMotors</a></div><div class="ttdeci">void startLaunchMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00028">functions.c:28</a></div></div>
 <div class="ttc" id="functions_8c_html_a08fcbf8aee781b11be9271b410a3b4c2"><div class="ttname"><a href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a></div><div class="ttdeci">void reverseIntakeMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00052">functions.c:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 7 2016 21:10:00 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 12 2016 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
