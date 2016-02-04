@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_2ec',['main.c',['../main_8c.html',1,'']]],
-  ['motor_5fspeed',['MOTOR_SPEED',['../functions_8c.html#acc1d6ebc5509da9902714de72ecbf1bd',1,'functions.c']]]
+  ['lockleftside',['lockLeftSide',['../functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e',1,'functions.c']]],
+  ['lockrightside',['lockRightSide',['../functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945',1,'functions.c']]],
+  ['loopcount',['loopCount',['../functions_8c.html#af0e842a53b6692a1e808f86da5741152',1,'functions.c']]]
 ];
