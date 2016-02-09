@@ -123,10 +123,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        motorSet(rb, rightDrive);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//INTAKE CONTROL</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_DOWN)){ <span class="comment">//spin intake foreward</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_UP)){   <span class="comment">//spin intake foreward</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="functions_8c.html#a40f5b3436be1fb5b7ae10a12a56a102c">startIntakeMotors</a>();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_UP)){  <span class="comment">//spin inatke backwards</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(1, 5, JOY_DOWN)){    <span class="comment">//spin inatke backwards</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="functions_8c.html#a08fcbf8aee781b11be9271b410a3b4c2">reverseIntakeMotors</a>();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span>{<span class="comment">//STOP INTAKE</span></div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 4 2016 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 9 2016 21:10:01 for 241D Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
