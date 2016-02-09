@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['setmotors',['setMotors',['../functions_8c.html#ad8ed41f25272dc6aad41f3d0faac7dff',1,'functions.c']]],
-  ['setmotorsleft',['setMotorsLeft',['../functions_8c.html#a19e059ac26fceeabb21bf022a931fd0d',1,'functions.c']]],
-  ['setmotorsright',['setMotorsRight',['../functions_8c.html#a0d25f246c45a7aefd6395283e8bed95c',1,'functions.c']]],
-  ['spin_5fflywheel',['spin_flywheel',['../functions_8c.html#a7ef6eb4e7fd28f55d59c96467fc4ea60',1,'functions.c']]]
+  ['testmotors',['testMotors',['../functions_8c.html#a26104fc1c8e80e3f363032ca406d711a',1,'functions.c']]],
+  ['timeout_5fcnt_5fper_5fsec',['TIMEOUT_CNT_PER_SEC',['../functions_8c.html#a5359725727b9a0e2588f4790da94b43e',1,'functions.c']]],
+  ['turnleftdegrees',['turnLeftDegrees',['../functions_8c.html#aaf5a5fb405343531462600db0961eb04',1,'functions.c']]],
+  ['turnleftseconds',['turnLeftSeconds',['../functions_8c.html#a78865695e4268d88e03b81d60c9ce8fb',1,'functions.c']]],
+  ['turnleftticks',['turnLeftTicks',['../functions_8c.html#a7770f47c49b1afb6912978fd649f01c8',1,'functions.c']]],
+  ['turnrightdegrees',['turnRightDegrees',['../functions_8c.html#a507906c16b5891f1d2ac958eaae6e734',1,'functions.c']]],
+  ['turnrightseconds',['turnRightSeconds',['../functions_8c.html#a395c992d0024bc009c3b2f2817fab76e',1,'functions.c']]],
+  ['turnrightticks',['turnRightTicks',['../functions_8c.html#a9eb766f7a74b0e3ae6cc88eecee55282',1,'functions.c']]]
 ];
