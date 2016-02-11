@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lockleftside',['lockLeftSide',['../functions_8c.html#a5ecfe5536c8ea4eb1fb1d4096219076e',1,'functions.c']]],
-  ['lockrightside',['lockRightSide',['../functions_8c.html#a2969e9dad58b1f36d8c25daf1d308945',1,'functions.c']]]
+  ['highspeeddownbtnprsd',['highSpeedDownBtnPrsd',['../main_8c.html#ab91abad83908d18877e8cc96017bf9e9',1,'main.c']]],
+  ['highspeedupbtnprsd',['highSpeedUpBtnPrsd',['../main_8c.html#ab0bac6b9c763a6c9741e896176fe5ea6',1,'main.c']]]
 ];
