@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    startTask(<a class="code" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a>);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// position of bot on field</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> position = 5;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> position = 1;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span>(position == 1){ <span class="comment">// blue, net side</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
@@ -191,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">        wait1Msec(1000);</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">        motor[flyL2] = 0;*/</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        startTask(<a class="code" href="functions_8c.html#a7ef6eb4e7fd28f55d59c96467fc4ea60">spin_flywheel</a>);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="functions_8c.html#aa69edd24eb3588f56ae2628dff2a629d">FW_stopped</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="functions_8c.html#a488ce1ce36db380f4f13290af5dda96b">FW_running</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
@@ -245,7 +245,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">if</span>(vexRT[Btn5U] == 1){</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <a class="code" href="functions_8c.html#aa69edd24eb3588f56ae2628dff2a629d">FW_stopped</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <a class="code" href="functions_8c.html#a488ce1ce36db380f4f13290af5dda96b">FW_running</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="functions_8c.html#a41b997251467cc35215ba6b498b09e29">FW_half</a>){</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <a class="code" href="functions_8c.html#a41b997251467cc35215ba6b498b09e29">FW_half</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            } <span class="keywordflow">else</span> {</div>
@@ -254,7 +254,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">if</span>(vexRT[Btn5D] == 1){</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <a class="code" href="functions_8c.html#aa69edd24eb3588f56ae2628dff2a629d">FW_stopped</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <a class="code" href="functions_8c.html#a488ce1ce36db380f4f13290af5dda96b">FW_running</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="functions_8c.html#a41b997251467cc35215ba6b498b09e29">FW_half</a>){</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <a class="code" href="functions_8c.html#a41b997251467cc35215ba6b498b09e29">FW_half</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            } <span class="keywordflow">else</span> {</div>
@@ -296,20 +296,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="ttc" id="functions_8c_html_a488ce1ce36db380f4f13290af5dda96b"><div class="ttname"><a href="functions_8c.html#a488ce1ce36db380f4f13290af5dda96b">FW_running</a></div><div class="ttdeci">bool FW_running</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00059">functions.c:59</a></div></div>
 <div class="ttc" id="main_8c_html_ab532f0b1474225e81ebd23b2d05f7c11"><div class="ttname"><a href="main_8c.html#ab532f0b1474225e81ebd23b2d05f7c11">pre_auton</a></div><div class="ttdeci">void pre_auton()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00064">main.c:64</a></div></div>
 <div class="ttc" id="main_8c_html_ab91abad83908d18877e8cc96017bf9e9"><div class="ttname"><a href="main_8c.html#ab91abad83908d18877e8cc96017bf9e9">highSpeedDownBtnPrsd</a></div><div class="ttdeci">bool highSpeedDownBtnPrsd</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00053">main.c:53</a></div></div>
-<div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00593">functions.c:593</a></div></div>
+<div class="ttc" id="functions_8c_html_acb22ab198756eb13e6a692e73dc98b3b"><div class="ttname"><a href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a></div><div class="ttdeci">task runMotors()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00601">functions.c:601</a></div></div>
 <div class="ttc" id="functions_8c_html_a41b997251467cc35215ba6b498b09e29"><div class="ttname"><a href="functions_8c.html#a41b997251467cc35215ba6b498b09e29">FW_half</a></div><div class="ttdeci">bool FW_half</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00058">functions.c:58</a></div></div>
-<div class="ttc" id="functions_8c_html_aa69edd24eb3588f56ae2628dff2a629d"><div class="ttname"><a href="functions_8c.html#aa69edd24eb3588f56ae2628dff2a629d">FW_stopped</a></div><div class="ttdeci">bool FW_stopped</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00059">functions.c:59</a></div></div>
 <div class="ttc" id="main_8c_html_ab0bac6b9c763a6c9741e896176fe5ea6"><div class="ttname"><a href="main_8c.html#ab0bac6b9c763a6c9741e896176fe5ea6">highSpeedUpBtnPrsd</a></div><div class="ttdeci">bool highSpeedUpBtnPrsd</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00052">main.c:52</a></div></div>
 <div class="ttc" id="main_8c_html_a371bbbbc61aa430884cb77eb56b3df53"><div class="ttname"><a href="main_8c.html#a371bbbbc61aa430884cb77eb56b3df53">autonomous</a></div><div class="ttdeci">task autonomous()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00080">main.c:80</a></div></div>
 <div class="ttc" id="main_8c_html_a99a39462aa5b36444a05e4b22d8720b3"><div class="ttname"><a href="main_8c.html#a99a39462aa5b36444a05e4b22d8720b3">usercontrol</a></div><div class="ttdeci">task usercontrol()</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00144">main.c:144</a></div></div>
-<div class="ttc" id="functions_8c_html_a7ef6eb4e7fd28f55d59c96467fc4ea60"><div class="ttname"><a href="functions_8c.html#a7ef6eb4e7fd28f55d59c96467fc4ea60">spin_flywheel</a></div><div class="ttdeci">task spin_flywheel()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00614">functions.c:614</a></div></div>
+<div class="ttc" id="functions_8c_html_a7ef6eb4e7fd28f55d59c96467fc4ea60"><div class="ttname"><a href="functions_8c.html#a7ef6eb4e7fd28f55d59c96467fc4ea60">spin_flywheel</a></div><div class="ttdeci">task spin_flywheel()</div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00622">functions.c:622</a></div></div>
 <div class="ttc" id="functions_8c_html"><div class="ttname"><a href="functions_8c.html">functions.c</a></div><div class="ttdoc">This file contains all functions to be used by the competition code. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 16 2016 21:05:01 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 18 2016 21:05:01 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
