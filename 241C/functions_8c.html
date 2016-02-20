@@ -106,19 +106,19 @@ Macros</h2></td></tr>
 <tr class="memitem:acc1d6ebc5509da9902714de72ecbf1bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acc1d6ebc5509da9902714de72ecbf1bd">MOTOR_SPEED</a>&#160;&#160;&#160;118</td></tr>
 <tr class="separator:acc1d6ebc5509da9902714de72ecbf1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e754922f65a6062a75f0394155c845a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e754922f65a6062a75f0394155c845a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_SENSOR_SCALE</b>&#160;&#160;&#160;1</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_SENSOR_SCALE</b>&#160;&#160;&#160;1.0</td></tr>
 <tr class="separator:a7e754922f65a6062a75f0394155c845a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e33c4721db17ae6cbae18a50eccc001"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e33c4721db17ae6cbae18a50eccc001"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_MOTOR_SCALE</b>&#160;&#160;&#160;-1</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_MOTOR_SCALE</b>&#160;&#160;&#160;-1.0</td></tr>
 <tr class="separator:a1e33c4721db17ae6cbae18a50eccc001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02be2e6fae33049b568f1535f20ccf6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02be2e6fae33049b568f1535f20ccf6c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_DRIVE_MAX</b>&#160;&#160;&#160;127</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_DRIVE_MAX</b>&#160;&#160;&#160;127.0</td></tr>
 <tr class="separator:a02be2e6fae33049b568f1535f20ccf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c7ee81c742fd955a83c90004df01b8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c7ee81c742fd955a83c90004df01b8a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_DRIVE_MIN</b>&#160;&#160;&#160;(-127)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_DRIVE_MIN</b>&#160;&#160;&#160;(-127.0)</td></tr>
 <tr class="separator:a2c7ee81c742fd955a83c90004df01b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ec081867aed740755f68feaa50ecc47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ec081867aed740755f68feaa50ecc47"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_INTEGRAL_LIMIT</b>&#160;&#160;&#160;50</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PID_INTEGRAL_LIMIT</b>&#160;&#160;&#160;200.0</td></tr>
 <tr class="separator:a4ec081867aed740755f68feaa50ecc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -161,13 +161,13 @@ Functions</h2></td></tr>
 <tr class="separator:a78865695e4268d88e03b81d60c9ce8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb22ab198756eb13e6a692e73dc98b3b"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acb22ab198756eb13e6a692e73dc98b3b">runMotors</a> ()</td></tr>
 <tr class="separator:acb22ab198756eb13e6a692e73dc98b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f3c745b308e1f814946de3cc489fb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a15f3c745b308e1f814946de3cc489fb0">spinIntake</a> (int speed, float seconds)</td></tr>
+<tr class="separator:a15f3c745b308e1f814946de3cc489fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ef6eb4e7fd28f55d59c96467fc4ea60"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a7ef6eb4e7fd28f55d59c96467fc4ea60">spin_flywheel</a> ()</td></tr>
 <tr class="separator:a7ef6eb4e7fd28f55d59c96467fc4ea60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c7e02c54b8c2afaf6d840612ccc978b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c7e02c54b8c2afaf6d840612ccc978b"></a>
-task&#160;</td><td class="memItemRight" valign="bottom"><b>FW_pidController</b> ()</td></tr>
+<tr class="memitem:a3c7e02c54b8c2afaf6d840612ccc978b"><td class="memItemLeft" align="right" valign="top">task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a3c7e02c54b8c2afaf6d840612ccc978b">FW_pidController</a> ()</td></tr>
 <tr class="separator:a3c7e02c54b8c2afaf6d840612ccc978b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73c8b0efa373edfe20e8fb2c662bb727"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73c8b0efa373edfe20e8fb2c662bb727"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>spin_flywheel_old</b> (float initial=0, float speed, int seconds)</td></tr>
+<tr class="memitem:a73c8b0efa373edfe20e8fb2c662bb727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a73c8b0efa373edfe20e8fb2c662bb727">spin_flywheel_old</a> (float initial=0, float speed, int seconds)</td></tr>
 <tr class="separator:a73c8b0efa373edfe20e8fb2c662bb727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -181,16 +181,16 @@ Variables</h2></td></tr>
 <tr class="memitem:acd43b5378a6c28ec501b98141efa712c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#acd43b5378a6c28ec501b98141efa712c">backRightVal</a> = 0</td></tr>
 <tr class="separator:acd43b5378a6c28ec501b98141efa712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a00808a42a27224a9789398d54ae09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87a00808a42a27224a9789398d54ae09"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_highSpeed</b> = 80</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_highSpeed</b> = 90</td></tr>
 <tr class="separator:a87a00808a42a27224a9789398d54ae09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a390969344a62d48ad3c50529182e6b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a390969344a62d48ad3c50529182e6b0a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_highSpeedDefault</b> = 80</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_highSpeedDefault</b> = 90</td></tr>
 <tr class="separator:a390969344a62d48ad3c50529182e6b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4df8e267087d3b77f298f976a25437"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d4df8e267087d3b77f298f976a25437"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_medSpeed</b> = 4</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_medSpeed</b> = 60</td></tr>
 <tr class="separator:a5d4df8e267087d3b77f298f976a25437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dfc3a22f26162deaca4a67f62136248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dfc3a22f26162deaca4a67f62136248"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_medSpeedDefault</b> = 4</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_medSpeedDefault</b> = 60</td></tr>
 <tr class="separator:a4dfc3a22f26162deaca4a67f62136248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32bbafd84e0d68a8afa6c044ba0eb826"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a32bbafd84e0d68a8afa6c044ba0eb826">FW_loopCount</a> = 0</td></tr>
 <tr class="separator:a32bbafd84e0d68a8afa6c044ba0eb826"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,36 +202,87 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>FW_medSpeedDefault</b>
 <tr class="separator:a488ce1ce36db380f4f13290af5dda96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9b409cc6a78d263dcbd666623d84bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8c.html#a5d9b409cc6a78d263dcbd666623d84bf">FW_power</a> = 0</td></tr>
 <tr class="separator:a5d9b409cc6a78d263dcbd666623d84bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73b23341d1310f980e29673f09ab8b5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b23341d1310f980e29673f09ab8b5e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidSensorCurrentValue</b></td></tr>
-<tr class="separator:a73b23341d1310f980e29673f09ab8b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1d4166c34c911a98c7209e3b98decc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1d4166c34c911a98c7209e3b98decc0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidError</b></td></tr>
-<tr class="separator:ae1d4166c34c911a98c7209e3b98decc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec5969fabbc3589a5d0d66fca5e9119"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec5969fabbc3589a5d0d66fca5e9119"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidLastError</b></td></tr>
-<tr class="separator:abec5969fabbc3589a5d0d66fca5e9119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bc85c54b92d122a9fe323b1167bf2b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bc85c54b92d122a9fe323b1167bf2b8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidIntegral</b></td></tr>
-<tr class="separator:a8bc85c54b92d122a9fe323b1167bf2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1bc3f58868736593f601344f37d737"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff1bc3f58868736593f601344f37d737"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidDerivative</b></td></tr>
-<tr class="separator:aff1bc3f58868736593f601344f37d737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae07b209fe78814b47909ef4291c5dafa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae07b209fe78814b47909ef4291c5dafa"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pidDrive</b></td></tr>
-<tr class="separator:ae07b209fe78814b47909ef4291c5dafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb75ca12a0a3d97bc1ada876dfa4d480"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb75ca12a0a3d97bc1ada876dfa4d480"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1SensorCurrentValue</b></td></tr>
+<tr class="separator:abb75ca12a0a3d97bc1ada876dfa4d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7785a563c45336f30d0def84aa32c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e7785a563c45336f30d0def84aa32c0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1Error</b></td></tr>
+<tr class="separator:a6e7785a563c45336f30d0def84aa32c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317fa1f57b2a4bf6331f2d1d979b9b56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a317fa1f57b2a4bf6331f2d1d979b9b56"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1LastError</b></td></tr>
+<tr class="separator:a317fa1f57b2a4bf6331f2d1d979b9b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d22a46c21b5656188fda83b42bd647"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9d22a46c21b5656188fda83b42bd647"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1Integral</b></td></tr>
+<tr class="separator:ad9d22a46c21b5656188fda83b42bd647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf275680f04b3c9230729388e937db5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf275680f04b3c9230729388e937db5a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1Derivative</b></td></tr>
+<tr class="separator:aaf275680f04b3c9230729388e937db5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b44f117c8876be4705139b06923561"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08b44f117c8876be4705139b06923561"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R1Drive</b></td></tr>
+<tr class="separator:a08b44f117c8876be4705139b06923561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af582a3bb643e58e53f0ad8e2faeb404c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af582a3bb643e58e53f0ad8e2faeb404c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2SensorCurrentValue</b></td></tr>
+<tr class="separator:af582a3bb643e58e53f0ad8e2faeb404c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab801f0936466304901a18a5fdb5f7730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab801f0936466304901a18a5fdb5f7730"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2Error</b></td></tr>
+<tr class="separator:ab801f0936466304901a18a5fdb5f7730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1a24168baad440ea43bfe4ef03a120"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1a24168baad440ea43bfe4ef03a120"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2LastError</b></td></tr>
+<tr class="separator:a5d1a24168baad440ea43bfe4ef03a120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8173f5a45d60e0d6989cf361841146ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8173f5a45d60e0d6989cf361841146ca"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2Integral</b></td></tr>
+<tr class="separator:a8173f5a45d60e0d6989cf361841146ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8905d8a2f62ec0a28f330d5ef8d0416"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8905d8a2f62ec0a28f330d5ef8d0416"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2Derivative</b></td></tr>
+<tr class="separator:ab8905d8a2f62ec0a28f330d5ef8d0416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6609b0662f5603d858ad5bed0f647eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6609b0662f5603d858ad5bed0f647eb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>R2Drive</b></td></tr>
+<tr class="separator:ac6609b0662f5603d858ad5bed0f647eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa928833105dfdaf4add43ea371a7248b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa928833105dfdaf4add43ea371a7248b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1SensorCurrentValue</b></td></tr>
+<tr class="separator:aa928833105dfdaf4add43ea371a7248b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd5aeded555f813bbe2f89996b85116"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bd5aeded555f813bbe2f89996b85116"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1Error</b></td></tr>
+<tr class="separator:a6bd5aeded555f813bbe2f89996b85116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15610a28d585ee55b76fe089eed0cde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af15610a28d585ee55b76fe089eed0cde"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1LastError</b></td></tr>
+<tr class="separator:af15610a28d585ee55b76fe089eed0cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba270fef62d2ff53e941a0f08756117e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba270fef62d2ff53e941a0f08756117e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1Integral</b></td></tr>
+<tr class="separator:aba270fef62d2ff53e941a0f08756117e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4464ee385ea6eaac7addd32c55223a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4464ee385ea6eaac7addd32c55223a8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1Derivative</b></td></tr>
+<tr class="separator:ab4464ee385ea6eaac7addd32c55223a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e68945ba7c56866344364eeeec4923"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1e68945ba7c56866344364eeeec4923"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L1Drive</b></td></tr>
+<tr class="separator:ae1e68945ba7c56866344364eeeec4923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87d1e1aa815eb5c4a4bcfe43b72d071"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab87d1e1aa815eb5c4a4bcfe43b72d071"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2SensorCurrentValue</b></td></tr>
+<tr class="separator:ab87d1e1aa815eb5c4a4bcfe43b72d071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678d53028f081630606b34010f9768e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a678d53028f081630606b34010f9768e1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2Error</b></td></tr>
+<tr class="separator:a678d53028f081630606b34010f9768e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9e5aee42152f08eea4a17f079dbbd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e9e5aee42152f08eea4a17f079dbbd7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2LastError</b></td></tr>
+<tr class="separator:a6e9e5aee42152f08eea4a17f079dbbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55bc29997d2433dfd16a56fab925b2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae55bc29997d2433dfd16a56fab925b2c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2Integral</b></td></tr>
+<tr class="separator:ae55bc29997d2433dfd16a56fab925b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49acc5a998fcd63add997f81ba21eef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac49acc5a998fcd63add997f81ba21eef"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2Derivative</b></td></tr>
+<tr class="separator:ac49acc5a998fcd63add997f81ba21eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bac29e3f83ed78c87b091029c93e972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bac29e3f83ed78c87b091029c93e972"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>L2Drive</b></td></tr>
+<tr class="separator:a5bac29e3f83ed78c87b091029c93e972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9dbf7817160bc09189b0fe9cb6d5d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9dbf7817160bc09189b0fe9cb6d5d57"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Kp</b> = 1.0</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Kp</b> = 0.5</td></tr>
 <tr class="separator:aa9dbf7817160bc09189b0fe9cb6d5d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b03a8b222f2546ff5b3c53d2afa3e36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b03a8b222f2546ff5b3c53d2afa3e36"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Ki</b> = 0.04</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Ki</b> = 0.1</td></tr>
 <tr class="separator:a2b03a8b222f2546ff5b3c53d2afa3e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3f60f0f33b231fb2406ecd98d4838f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3f60f0f33b231fb2406ecd98d4838f9"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Kd</b> = 1.0</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>pid_Kd</b> = 0.005</td></tr>
 <tr class="separator:aa3f60f0f33b231fb2406ecd98d4838f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6495c1bf936fec2450475cf5102fa6e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6495c1bf936fec2450475cf5102fa6e6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>swag</b> = 0</td></tr>
-<tr class="separator:a6495c1bf936fec2450475cf5102fa6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all functions to be used by the competition code. </p>
@@ -257,7 +308,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 </div><div class="memdoc">
 <p>default motor speed </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00045">45</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00047">47</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -272,7 +323,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 </div><div class="memdoc">
 <p>amount of timeout counts per second </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00044">44</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00046">46</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -310,7 +361,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00191">191</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00213">213</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -331,7 +382,7 @@ Josh Asari <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'h.'+'asa'+'ri'
 <dd>
 Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00093">93</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00115">115</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -375,7 +426,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00209">209</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00231">231</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -422,7 +473,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00395">395</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00417">417</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -469,7 +520,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00355">355</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00377">377</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -506,7 +557,26 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00174">174</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00196">196</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c7e02c54b8c2afaf6d840612ccc978b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">task FW_pidController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Spins up the fly wheel to a certain speed using a PID</p>
+<dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00771">771</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -526,7 +596,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section warning"><dt>Warning</dt><dd>function does not work</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00303">303</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00325">325</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -546,7 +616,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <dl class="section warning"><dt>Warning</dt><dd>function does not work</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00327">327</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00349">349</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -565,7 +635,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Set the motors to the current values</p>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00601">601</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00623">623</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -591,7 +661,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00108">108</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00130">130</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -619,7 +689,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00125">125</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00147">147</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -647,7 +717,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00139">139</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00161">161</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -666,7 +736,73 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Spins up the fly wheel to a certain speed</p>
 <dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00622">622</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00661">661</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73c8b0efa373edfe20e8fb2c662bb727"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spin_flywheel_old </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>initial</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Spins up the fly wheel to a certain motor power</p>
+<dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00944">944</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15f3c745b308e1f814946de3cc489fb0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spinIntake </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>seconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intake balls</p>
+<dl class="section author"><dt>Author</dt><dd>Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@'+'gma'+'il'+'.co'+'m'; return false;">sgtko<span style="display: none;">.nosp@m.</span>de01<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00643">643</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -685,7 +821,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 <p>Runs each motor for 1.5 seconds</p>
 <dl class="section author"><dt>Author</dt><dd>Bernard Suwirjo <a href="#" onclick="location.href='mai'+'lto:'+'bsu'+'wi'+'rjo'+'@g'+'mai'+'l.'+'com'; return false;">bsuwi<span style="display: none;">.nosp@m.</span>rjo@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00149">149</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00171">171</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -724,7 +860,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00476">476</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00498">498</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -761,7 +897,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00584">584</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00606">606</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -800,7 +936,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00541">541</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00563">563</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -840,7 +976,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00433">433</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00455">455</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -877,7 +1013,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00564">564</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00586">586</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -916,7 +1052,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00519">519</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00541">541</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -932,7 +1068,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>value of the back left motor </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00048">48</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00050">50</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -947,7 +1083,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>value of the back right motor </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00050">50</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00052">52</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -962,7 +1098,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>value of the front left motor </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00047">47</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00049">49</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -977,7 +1113,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>value of the front right motor </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00049">49</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00051">51</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -992,7 +1128,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>boolean that determines if flywheel is at half </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00058">58</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00060">60</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1143,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>loop count for flywheel </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00056">56</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00058">58</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1158,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>power value for the flywheel </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00060">60</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00062">62</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1173,7 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>boolean that determines if flywheel is running </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00059">59</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00061">61</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -1052,14 +1188,14 @@ Sean Kelley <a href="#" onclick="location.href='mai'+'lto:'+'sgt'+'ko'+'de0'+'1@
 </div><div class="memdoc">
 <p>amount of ticks passed by flywheel in 5 loop counts </p>
 
-<p>Definition at line <a class="el" href="functions_8c_source.html#l00057">57</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
+<p>Definition at line <a class="el" href="functions_8c_source.html#l00059">59</a> of file <a class="el" href="functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 18 2016 21:05:01 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 20 2016 15:19:39 for 241C Competition Code by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
